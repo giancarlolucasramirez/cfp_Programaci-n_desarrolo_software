@@ -1,8 +1,8 @@
-<h2> ejercicio51 </h2>
-<h3>Suma de Números Pares:   </h3>
+<h2> ejercicio52 </h2>
+<h3>Suma de Matrices:   </h3>
 <pre>
     <code> 
-        Algoritmo sin_titulo
+        Algoritmo Suma-de-Matrices:
             definir i,j como entero
             Dimension matriz[3,3]
             Dimension matriz2[3,3]
@@ -45,11 +45,11 @@
 <br>
 
 
-<h2> ejercicio52 </h2>
-<h3>Suma de Números Pares:   </h3>
+<h2> ejercicio53 </h2>
+<h3>Promedio por Columna:   </h3>
 <pre>
     <code> 
-        Algoritmo sin_titulo
+        Algoritmo Promedio por Columna:
             Definir i,j Como real
             definir num Como Caracter
             Dimension matriz[3,4]
@@ -89,11 +89,11 @@
 
 
 
-<h2> ejercicio53 </h2>
-<h3>Suma de Números Pares:   </h3>
+<h2> ejercicio54 </h2>
+<h3>Suma de Diagonales:  </h3>
 <pre>
     <code> 
-        Algoritmo sin_titulo
+        Algoritmo Suma-de-Diagonales
             definir diagonal_principal,diagonal_secundaria Como Entero
             Dimension  array[5,5]
             
@@ -159,12 +159,12 @@
 <br>
 
 
-<h2> ejercicio54 </h2>
-<h3>Suma de Números Pares:   </h3>
+<h2> ejercicio55 </h2>
+<h3>Mayor Elemento por Fila:   </h3>
 <pre>
     <code> 
        
-        Algoritmo sin_titulo
+        Algoritmo Mayor_Elemento_por_Fila:
             definir a, b, fila, columna, maximo Como Entero
             Dimension matriz[4,3]
             
@@ -214,26 +214,21 @@
 <br>
 
 
-<h2> ejercicio55 </h2>
-<h3>Suma de Números Pares:   </h3>
+<h2> ejercicio56 </h2>
+<h3>  Rotación de Matriz: </h3>
 <pre>
     <code> 
-        Algoritmo sin_titulo
-            Para i = 2 Hasta 20 Con Paso 2 Hacer
-                total = total +i
-            Fin Para
-            escribir total
-        FinAlgoritmo
+       
  </code>
 </pre>
 <br>
 
 
-<h2> ejercicio56 </h2>
-<h3>Suma de Números Pares:   </h3>
+<h2> ejercicio57 </h2>
+<h3>Laberinto:   </h3>
 <pre>
     <code> 
-      Algoritmo sin_titulo
+      Algoritmo Laberinto:
             Definir fila_actual, columna_actual Como Entero
             Definir opcion_usuario Como Caracter
             Dimension laberinto[10, 10]
@@ -340,12 +335,12 @@
 <br>
 
 
-<h2> ejercicio57 </h2>
-<h3>Suma de Números Pares:   </h3>
+<h2> ejercicio58 </h2>
+<h3>Juego de la Vida (Conway's Game of Life):   </h3>
 <pre>
     <code> 
       
-Algoritmo sin_titulo
+Algoritmo Juego-de-la-Vida:
 	Definir f,c,relleno Como Entero
 	Definir perdio Como Logico
 	Dimension  vida[10,10]
@@ -400,11 +395,11 @@ FinAlgoritmo
 <br>
 
 
-<h2> ejercicio58 </h2>
-<h3>Suma de Números Pares:   </h3>
+<h2> ejercicio59 </h2>
+<h3>rompecabezas   </h3>
 <pre>
     <code> 
-       Algoritmo sin_titulo
+       Algoritmo rompecabezas
 	Definir f,c, validar_aleatorio Como Entero
 	Definir existe_aleatorio,fin_juego Como Logico
 	Dimension  rompecabezas[4,4]
@@ -506,241 +501,115 @@ FinAlgoritmo
 <br>
 
 
-<h2> ejercicio59 </h2>
-<h3>Suma de Números Pares:   </h3>
-<pre>
-    <code> 
-       Algoritmo ResolverRompecabezas
-    Dimension rompecabezasResuelto[4,4]
-    Dimension rompecabezasRevuelto[4,4]
-    Definir fila,columna, num como Entero
-    definir fin_juego Como Logico
-	fin_juego = Verdadero
-    // Llenar el rompecabezas resuelto con los números del 1 al 15 en orden
-    num <- 0
-    Para fila <- 1 Hasta 4 Con Paso 1 Hacer
-        Para columna <- 1 Hasta 4 Con Paso 1 Hacer
-			num <- num + 1
-            Si num <= 15 Entonces
-                rompecabezasResuelto[fila, columna] <- num
-            FinSi
-            
-        FinPara
-    FinPara
-	
-	//ACA VA REVOLVER NUMEROS
-	// revolver los numeros del 1 al 15 y el 16 en espacio vacío 
-	Para fila = 1 Hasta 4 Hacer
-		Para columna = 1 Hasta 4 Hacer
-			existe_aleatorio = Falso
-			validar_aleatorio = 0
-			
-			Repetir
-				existe_aleatorio = Falso
-				validar_aleatorio = Aleatorio(1,15);
-				
-				Para f = 1 Hasta 4 Hacer
-					Para c = 1 Hasta 4 Hacer
-						Si validar_aleatorio == rompecabezasRevuelto[f,c] Entonces
-							existe_aleatorio = Verdadero
-							f = 4
-							c = 4
-						FinSi
-					FinPara
-				FinPara
-				
-				Si existe_aleatorio == Falso Entonces
-					rompecabezasRevuelto[fila,columna] = validar_aleatorio;
-				FinSi
-				
-			Hasta Que rompecabezasRevuelto[fila,columna] <> 0 o (columna = 4 y fila = 4)
-			
-			
-		FinPara		
-		
-	FinPara
-	
-	
-    
-    Repetir
-        // Solicitar al usuario que ingrese  la posicion que cambiará el 0
-		fin_juego = Verdadero
-		f = 0
-		c = 0
-		Para fila = 1  Hasta 4 Con Paso 1 Hacer
-			Para columna = 1  Hasta 4 Con Paso 1 Hacer
-				si rompecabezasRevuelto[fila,columna] = 0 Entonces
-					f = fila
-					c = columna
-				FinSi
-				escribir rompecabezasRevuelto[fila,columna] "  |  " Sin Saltar
-			Fin Para
-			escribir " " 
-		Fin Para
-		
-		Escribir "Ingrese la posición "
-        Leer direccion
-        Para fila = 1 Hasta 4 Con Paso 1 Hacer
-			Para columna = 1  Hasta 4 Con Paso 1 Hacer
-				//arriba
-				Si f -1 > 0  y rompecabezasRevuelto[f-1,c] = direccion Entonces
-					rompecabezasRevuelto[f,c] = direccion
-					rompecabezasRevuelto[f-1,c] = 0 
-					
-					
-					
-				SiNo //abajo
-					Si f +1 < 5 y rompecabezasRevuelto[f+1,c] = direccion Entonces
-						rompecabezasRevuelto[f,c] = direccion
-						rompecabezasRevuelto[f+1,c] = 0
-						
-					Fin Si
-				FinSi
-				//izquierda
-				Si c -1 > 0  y rompecabezasRevuelto[f,c-1] = direccion Entonces
-					rompecabezasRevuelto[f,c] = direccion
-					rompecabezasRevuelto[f,c-1] = 0 
-					
-					
-					
-				SiNo //derecha
-					Si c +1 < 5 y rompecabezasRevuelto[f,c+1] = direccion Entonces
-						rompecabezasRevuelto[f,c] = direccion
-						rompecabezasRevuelto[f,c+1] = 0
-						
-						
-					Fin Si
-					
-				finsi	
-			FinPara
-		FinPara
-		Para fila = 1 Hasta 4 Con Paso 1 Hacer
-			Para columna = 1 Hasta 4 Con Paso 1 Hacer
-				
-				Si rompecabezasRevuelto[fila,columna] <> rompecabezasResuelto[fila,columna] Entonces
-					fin_juego = falso
-				finsi 
-			Fin Para
-		Fin Para
-		
-		
-		
-		
-	Hasta Que  fin_juego = Verdadero
-	Limpiar Pantalla
-	Escribir "felicidades ganaste"
-FinAlgoritmo
-
- </code>
-</pre>
-<br>
-
 <h2> ejercicio60 </h2>
-<h3>Suma de Números Pares:   </h3>
+<h3>sudoku   </h3>
 <pre>
     <code> 
-      Algoritmo sin_titulo
-            Definir fila_actual, columna_actual Como Entero
-            Definir opcion_usuario Como Caracter
-            Dimension laberinto[10, 10]
+        Funcion existe <- validarfila(num,f,sudoku)
+        para vc = 1 Hasta 9 Hacer
+            Si num == sudoku[f, vc] Entonces
+                existe = Verdadero
+                vc = 9
+            FinSi
+        FinPara
+        FinFuncion
+
+        Funcion existe <- validarcolumna(num,c,sudoku)
+        para vf = 1 Hasta 9 Hacer
+            Si num == sudoku[vf, c] Entonces
+                existe = Verdadero
+                vf = 9
+            FinSi
+        FinPara
+        FinFuncion
+
+        Funcion existe <- validarbloque(num,c,f,sudoku)
+        si f >= 1 y f<=3 Entonces
+            inicio_fila = 1
+        SiNo
+            si f >= 4 y f <= 6 Entonces
+                inicio_fila = 4 
+            SiNo
+                inicio_fila = 7
+            FinSi
+        FinSi
+        
+        si c >= 1 y c<=3 Entonces
+            inicio_columna = 1
+        SiNo
+            si c >= 4 y c <= 6 Entonces
+                inicio_columna = 4 
+            SiNo
+                inicio_columna = 7
+            FinSi
+        FinSi
+        
+        para i = inicio_fila Hasta  inicio_fila + 2 Hacer
+            Para j = inicio_columna Hasta inicio_columna + 2 Hacer
+                si num == sudoku[i,j] Entonces
+                    existe = Verdadero
+                    i = inicio_fila + 2
+                    j = inicio_columna + 2 
+                FinSi
+            FinPara
+        FinPara
+        
+        FinFuncion
+
+
+        Algoritmo sin_titulo
+            Definir num, contador, filas, columnas, sudoku, error Como Entero
+            Definir existe Como Logico
+            Dimension sudoku[9,9]
             
-            // Inicializar el laberinto
-            Para fila = 1 Hasta 10 Con Paso 1 Hacer
-                Para columna = 1 Hasta 10 Con Paso 1 Hacer
-                    laberinto[fila, columna] = 1
+            para f = 1 Hasta 9 Hacer
+                para c = 1 Hasta 9 Hacer
+                    
+                    para num = 1 Hasta 9 Hacer
+                        existe = Falso
+                        Repetir
+                            
+                            existe = validarfila(num,f, sudoku)
+                            si existe == Falso Entonces
+                                existe = validarcolumna(num,c , sudoku)
+                                si existe == falso Entonces
+                                    existe = validarbloque(num,c,f,sudoku)
+                                FinSi
+                            FinSi
+                            
+                            
+                            
+                            
+                            
+                            si existe == Falso Entonces
+                                sudoku[f,c] = num
+                                num = 9
+                            FinSi
+                            
+                        Hasta Que existe == Verdadero 
+                    FinPara
+                    Si sudoku[f,c] == 0 Entonces
+                        f = 1
+                        c = 1
+                    FinSi
+                    
                 FinPara
             FinPara
             
-            // Definir el camino en el laberinto
-            laberinto[1, 2] <- 5
-            laberinto[2, 2] <- 0
-            laberinto[3, 2] <- 0
-            laberinto[3, 3] <- 0
-            laberinto[3, 4] <- 0
-            laberinto[3, 5] <- 0
-            laberinto[3, 6] <- 0
-            laberinto[3, 7] <- 0
-            laberinto[3, 8] <- 0
-            laberinto[4, 4] <- 0
-            laberinto[4, 8] <- 0
-            laberinto[5, 4] <- 0
-            laberinto[5, 3] <- 0
-            laberinto[5, 2] <- 0
-            laberinto[5, 8] <- 0
-            laberinto[6, 2] <- 0
-            laberinto[7, 2] <- 0
-            laberinto[8, 2] <- 0
-            laberinto[8, 3] <- 0
-            laberinto[8, 4] <- 0
-            laberinto[8, 5] <- 0
-            laberinto[9, 5] <- 0
-            laberinto[9, 5] <- 0
-            laberinto[10, 5] <- 0
-            
-            
-            fila_actual <- 1
-            columna_actual <- 1
-            
-            Repetir
-                
-                // Mostrar el laberinto con la posición actual del jugador
-                Para fila = 1 Hasta 10 Con Paso 1 Hacer
-                    Para columna = 1 Hasta 10 Con Paso 1 Hacer
-                        si laberinto[fila,columna] = 5 Entonces
-                            fila_actual = fila
-                            columna_actual = columna
-                        fin si 
-                        Escribir laberinto[fila, columna] " " Sin Saltar
-                    FinPara
-                    Escribir ""
+            Para i = 1 Hasta 9 Con Paso 1 Hacer
+                Para j = 1 Hasta 9 Con Paso 1 Hacer
+                    si j <> 3 y j <> 6 Entonces
+                        Escribir sudoku[i,j], " " Sin Saltar
+                    SiNo
+                        Escribir sudoku[i,j], "|" Sin Saltar
+                    FinSi
                 FinPara
-                
-                Escribir "Ingrese la dirección (1: arriba, 2: abajo, 3: izquierda, 4: derecha): "
-                Leer opcion_usuario
-                
-                // arriba
-                Si opcion_usuario = "1" Entonces
-                    si laberinto[fila_actual-1,columna_actual] = 0 Entonces
-                        laberinto[fila_actual-1,columna_actual] = 5 
-                        laberinto[fila_actual,columna_actual] = 0 
-                    FinSi
+                Si i == 6 o i  == 3 Entonces
+                    Escribir " "
                 FinSi
-                
-                
-                // abajo 
-                Si opcion_usuario = "2" Entonces
-                    si laberinto[fila_actual+1,columna_actual] = 0 Entonces
-                        laberinto[fila_actual+1,columna_actual] = 5 
-                        laberinto[fila_actual,columna_actual] = 0 
-                    FinSi
-                FinSi
-                
-                
-                // izquierda
-                Si opcion_usuario = "3" Entonces
-                    si laberinto[fila_actual,columna_actual-1] = 0 Entonces
-                        laberinto[fila_actual,columna_actual-1] = 5 
-                        laberinto[fila_actual,columna_actual] = 0 
-                    FinSi
-                FinSi
-                
-                //derecha
-                Si opcion_usuario = "4" Entonces
-                    si laberinto[fila_actual,columna_actual+1] = 0 Entonces
-                        laberinto[fila_actual,columna_actual+1] = 5 
-                        laberinto[fila_actual,columna_actual] = 0 
-                    FinSi
-                FinSi
-                
-                
-                
-                
-                
-            Hasta Que  laberinto[10,5] = 5 
-            Limpiar Pantalla
-         Escribir " felicidades has ganado ^_^ "
-        
-        FinAlgoritmo
+                Escribir ""
+            Fin Para
+            FinAlgoritmo 
  </code>
 </pre>
 <br>
