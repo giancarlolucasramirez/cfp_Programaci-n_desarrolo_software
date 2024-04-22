@@ -209,7 +209,7 @@
 <h3>Validación_de_Entrada: </h3>
 <pre>
     <code> 
-        Algoritmo Validación de Entrada: 
+        Algoritmo_Validación_de_Entrada: 
             definir contra como cadena
             Repetir
                 escribir "ingrese una contraseña"
