@@ -183,24 +183,24 @@
 <h3>Patrón Numérico   </h3>
 <pre>
     <code> 
-        Algoritmo sin_titulo
-            definir num,contador,i Como Real
-            
-            contador = 1 
-            escribir "ingrese un numero"
-            leer num 
-            Para i = 0 Hasta 1 Con Paso 1 Hacer
-                Si num <10 Entonces
-                    i = 1 
-                SiNo
-                    i = 0
-                    contador = contador +1
-                    num = num/10
-                Fin Si
-                
-            Fin Para
-            escribir "este numero tiene " contador " digitos"
-        FinAlgoritmo
+ Algoritmo sin_titulo
+	definir num,contador,i Como Real
+	
+	contador = 1 
+	escribir "ingrese un numero"
+	leer num 
+	Para i = 0 Hasta 1 Con Paso 1 Hacer
+		Si num <10 Entonces
+			i = 1 
+		SiNo
+			i = 0
+			contador = contador +1
+			num = num/10
+		Fin Si
+		
+	Fin Para
+	escribir "este numero tiene " contador " digitos"
+FinAlgoritmo
  </code>
 </pre>
 <br>
