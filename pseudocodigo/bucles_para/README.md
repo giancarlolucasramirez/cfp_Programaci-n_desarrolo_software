@@ -1,1 +1,1 @@
-## [ejercicio del 21-30](./21-30)
+## [ejercicio del 31-30](./31-30)
