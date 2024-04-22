@@ -192,7 +192,7 @@
 <br>
 
 
-<h2> ejercicio20 </h2>
+<h2> ejercicio19 </h2>
 <h3> Divisibilidad por 5 y 3   </h3>
 <pre>
     <code> 
