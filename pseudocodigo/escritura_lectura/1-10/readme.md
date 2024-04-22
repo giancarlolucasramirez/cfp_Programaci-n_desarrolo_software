@@ -5,9 +5,8 @@
         Algoritmo sin_titulo
             //operadorcd 
             definir valor1,valor2 Como Entero 
-            escribir "ingrese el primer valor"
+            escribir "ingrese dos valores"
             leer valor1
-            escribir "ingrese su segundo valor "
             leer valor2
             escribir "la multiplicación de su número es ", valor1 * valor2 
             escribir "la suma de su número es ", valor1 + valor2 
@@ -41,11 +40,9 @@
     <code>
         Algoritmo sin_titulo
             definir valor1,valor2,valor3 Como real
-            escribir "ingresa el primer valor"
+            escribir "ingresa tus notas: "
             leer valor1
-            escribir "ingresa el segundo valor"
             leer valor2
-            escribir "ingrese el tercer valor"
             leer valor3
             escribir "su promedio es ", (valor1 + valor2 + valor3) / 3
         FinAlgoritmo
