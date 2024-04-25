@@ -1,0 +1,52 @@
+.container{
+width: 800px;
+height: 800px;
+background-color: black;
+margin-left: 330px;
+}
+.nave{
+display: flex;
+flex-direction: row;
+gap: 10px;
+list-style: none;
+color: white;
+}
+
+select{
+    width: 25px;
+    height: 25px;    
+}
+button{
+    color: white;
+    background-color: transparent   ;
+}
+
+.imagen{
+    width: 800px;
+    height: 500px;
+    background-color: aqua  ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.acho{
+width: 400px;
+height: 400px;
+margin-top: 85px;
+}
+.flex{
+display: flex;
+justify-content: flex-start ;
+align-items: flex-start;
+margin-right: 400px;
+margin-top: 15px;
+}
+
+.sign{
+  margin-right: 225px;
+  
+}
+#i{
+gap: 25px;
+}
