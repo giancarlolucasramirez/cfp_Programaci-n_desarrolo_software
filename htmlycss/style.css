@@ -1,58 +1,124 @@
-.container{
-width: 900px;
-height: 800px;
-background-color: black;
-margin-left: 330px;
+*{
+    padding: 0;
+    margin: 0;
 }
 
-.nave{
-display: flex;
-flex-direction: row;
-gap: 10px;
-list-style: none;
-color: white;
+body{
+    background-color: #000;
 }
-.logo{
-margin-right: 15px;
-}
-select{
-    width: 25px;
-    height: 25px;  
-    
-}
-button{
+
+.nave {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
     color: white;
-    background-color: transparent   ;
 }
 
-.imagen{
-    width: 1500px;
-    height: 800px;
-    background-color: aqua  ;
+.logo {
+    margin-right: 15px;
+}
+
+select {
+    width: 90px;
+    height: 25px;
+    background-color: transparent;
+    color: white;
+    border-style: none;
+}
+
+button {
+    color: white;
+    background-color: transparent;
+}
+
+.contenido-principal{
+    width: 100%;
+    height: 50%;
+    background: rgb(233, 176, 0);
+    background: linear-gradient(90deg, rgba(233, 176, 0, 1) 0%, rgba(255, 0, 95, 1) 50%, rgba(255, 82, 114, 1) 100%);
+}
+
+.degradado-transparente {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgb(233, 176, 0);
+    background: linear-gradient(90deg, rgba(233, 176, 0, 0.5) 0%, rgba(255, 0, 95, 0.5) 50%, rgba(255, 82, 114, 0.5) 100%);
+}
+
+.banner{
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.flex {
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.nav1 {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    gap: 15px;
 }
 
-.flex{
-display: flex;
-justify-content: flex-start ;
-margin-right: 400px;
-margin-top: 15px;
-}
-
-
-
-
-.nav1{
+.nav2 {
     display: flex;
     flex-direction: row;
-    gap: 110px;
+    justify-content: end;
+    gap: 13px;
 }
 
-.nav2{
+.build {
+    z-index: 1;
+    width: 50%;
+    color: white;
+    align-self: center;
+}
+
+.build p {
+    padding-bottom: 5px;
+
+}
+
+.botones {
     display: flex;
     flex-direction: row;
-    gap: 3px;
+    gap: 25px;
+}
+
+.button12 {
+    background-color: black;
+    margin-top: 35px;
+
+    width: 800px;
+    height: 50px;
+  
+}
+
+.cursos {
+    width: 500px;
+    height: 500px;
+    background-color: black;
+    display: flex;
+    align-items: end;
+
+}
+
+.js {
+    width: 300px;
+    height: 200px;
+    background-color: gray;
+    margin-left: 20px;
+    display: flex;
+    justify-content: end;
+}
+
+.js-logo {
+    width: 70px;
+    height: 70px;
+
 }
