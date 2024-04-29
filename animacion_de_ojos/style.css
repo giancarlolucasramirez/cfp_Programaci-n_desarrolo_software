@@ -1,0 +1,51 @@
+.container{
+display: flex;
+justify-content: center;
+align-items: center;
+align-self: center;
+
+}
+.cara {
+    width: 500px;
+    height: 500px;
+    border-radius: 100%;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    gap: 10px;
+    
+}
+
+
+.ojo1, .ojo2{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background-color: black;
+    animation: move 5s infinite;
+}
+
+
+@keyframes move {
+    0%{
+      width: 70px;
+      height: 70px;  
+    }   
+
+    10%{
+      transform: translate(70px,100px); 
+      
+    }
+
+    50%{
+      transform: translate(90px);  
+    }
+
+}
+
+
+
+
