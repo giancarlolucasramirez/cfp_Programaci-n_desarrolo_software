@@ -218,7 +218,45 @@
 <h3>  Rotación de Matriz: </h3>
 <pre>
     <code> 
-       
+         
+        Algoritmo sin_titulo
+            definir matriz, matriz2 Como Entero
+            Definir grafica Como Caracter
+            Dimension matriz[4,4]
+        matriz[1,1] =1
+        matriz[1,2] =2
+        matriz[1,3] =3
+        matriz[1,4] =4
+        matriz[2,1] =5
+        matriz[2,2] =6
+        matriz[2,3] =7
+        matriz[2,4] =8
+        matriz[3,1] =9
+        matriz[3,2] =10
+        matriz[3,3] =11
+        matriz[3,4] =12
+        matriz[4,1] =13
+        matriz[4,2] =14
+        matriz[4,3] =15
+        matriz[4,4] =16
+
+        para i = 1 Hasta 4 Con Paso 1 Hacer
+            para j = 1 Hasta  4 Con Paso 1 Hacer
+                escribir matriz[i,j] " " " " Sin Saltar 
+            FinPara
+            Escribir " "
+        FinPara
+        Escribir ""
+
+        para i = 1 Hasta 4 Con Paso 1 Hacer
+            para j = 4 Hasta  1 Con Paso -1 Hacer
+                escribir matriz[j,i] " " " " Sin Saltar 
+            FinPara
+            Escribir " "
+        FinPara
+    FinAlgoritmo
+
+     
  </code>
 </pre>
 <br>
