@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+
+<body>
+    <p id="description">formulario de cómo te sientes</p>
+    
+    <form>
+        <fieldset>
+            <div class="form-rows">
+                <div class="labels">
+                    <label for="name" id="name-label">Nombre</label>
+                </div>
+                <div class="fields">
+                    <input type="text" id="name" class="input-fields" placeholder="escribe tu nombre" required="">
+                </div>
+            </div>
+            <div class="form-rows">
+                <div class="labels">
+                    <label for="email" id="email-label">Email</label>
+                </div>
+                <div class="fields">
+                    <input type="email" id="email" class="input-fields" placeholder="ingresa tu correo"
+                        required="">
+                </div>
+            </div>
+            <div class="form-rows">
+                <div class="labels">
+                    <label for="number" id="number-label">En una escala del 1 al 10, ¿cómo te sientes?</label>
+                </div>
+                <div class="fields">
+                    <input type="number" id="number" class="input-fields" 
+                        min="1" max="10">
+                </div>
+            </div>
+            <div class="form-rows">
+                <div class="labels">
+                    <label for="dropdown" id="dropdown-label">cómo te sientes ?</label>
+                </div>
+                <div class="fields">
+                    <select name="Location of positive event" id="dropdown" class="dropdown">
+                        <option value="home">super bien</option>
+                        <option value="commute">bien</option>
+                        <option value="work">regular</option>
+                        <option value="outside">mal</option>
+                        <option value="other">muy mal</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-rows">
+                <div class="labels">
+                    <label for="time-of-day">haces tu cama a diario?</label>
+                </div>
+                <div class="fields">
+                    <ul id="time-of-day" style="list-style: none;">
+                        <li class="radio">
+                            <label>
+                                si
+                                <input name="time-radio" type="radio" value="1" class="user-selection">
+                            </label>
+                        </li>
+                        <li class="radio">
+                            <label>
+                                no
+                                <input name="time-radio" type="radio" value="1" class="user-selection">
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="form-rows">
+                <div class="labels">
+                    <label for="feelings">
+                        ¿Qué emociones experimentaste?
+                        (Seleccione todas las que correspondan)
+                        <br>
+                        (Seleccione todas las que correspondan)
+                    </label>
+                </div>
+                <div class="fields">
+                    <ul id="feelings" style="list-style: none;">
+                        <li class="radio">
+                            <label>
+                                <input name="feeling-check" value="1" type="checkbox" class="user-selection">
+                                tristeza
+                            </label>
+                        </li>
+                        <li class="radio">
+                            <label>
+                                <input name="feeling-check" value="2" type="checkbox" class="user-selection">
+                                enfado
+                            </label>
+                        </li>
+                        <li class="radio">
+                            <label>
+                                <input name="feeling-check" value="3" type="checkbox" class="user-selection">
+                                alegrá
+                            </label>
+                        </li>
+                        <li class="radio">
+                            <label>
+                                <input name="feeling-check" value="4" type="checkbox" class="user-selection">
+                                Angustia
+                            </label>
+                        </li>
+                        <li class="radio">
+                            <label>
+                                <input name="feeling-check" value="5" type="checkbox" class="user-selection">
+                                Temor
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="envío">enviar</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>

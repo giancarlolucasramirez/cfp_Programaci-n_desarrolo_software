@@ -1,0 +1,172 @@
+body {
+    margin: 0%;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(gray 0%, black 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.di1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    text-align: center;
+    align-items: center;
+}
+
+.linea {
+
+    width: 200px;
+    height: 2px;
+    border-bottom: 2px dotted black;
+}
+
+.signos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 1rem;
+    font-size: 60px;
+}
+
+.cajas {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 60vh;
+    width: 90vw;
+    gap: 3%;
+
+
+}
+
+.nums {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: rgba(165, 42, 42, 0);
+   margin-right: 9px;
+
+}
+
+
+
+ 
+.caja1, .caja2, .caja3,  .caja4 {
+    background-position: center;
+    background-size: cover;
+    width: 50vw;
+    height: 50vh;
+    border-radius: 10px;
+
+}
+
+
+.transparente {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(115deg, white 0%, rgba(243, 235, 1, 0) 30%, rgba(255, 0, 0, 0) 70%, white 100%);
+    margin-top: -6%;
+
+}
+.transparente:hover{
+    background: linear-gradient(115deg, rgba(255, 255, 255, 0) 0%, rgba(243, 235, 1, 0) 30%, rgba(255, 0, 0, 0) 70%, rgba(255, 255, 255, 0) 100%);
+}
+.caja1 {
+    background-image: url(img1.jpg);
+
+}
+
+.caja1:hover {
+    color: transparent;
+
+}
+
+.caja2 {
+    background-image: url(img2.jpg);
+
+}
+
+.caja2:hover {
+    color: transparent;
+
+}
+
+.caja3 {
+    background-image: url(img3.jpg);
+
+}
+
+.caja3:hover {
+    color: transparent;
+
+}
+
+.caja4 {
+    background-image: url(img1.jpg);
+
+}
+
+.caja4:hover {
+    color: transparent;
+
+}
+
+.padre_boton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-style: none;
+    background-color: rgb(42, 47, 47);
+    width: 45rem;
+    border-radius: 15px;
+    margin-left: 15%;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.puntos {
+    font-size: 30px;
+    margin-top: -0%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    margin: 5px;
+    color: white;
+}
+
+
+.boton1 {
+    width: 60px;
+    height: 60px;
+
+}
+
+.boton1:hover {
+    background-color: rgb(76, 130, 238);
+    box-shadow: 5%;
+}
+
+button {
+    margin: 5px;
+}
+
+.flecha_final{
+    background-color: transparent;
+    color: white;
+}
+
+button{
+    cursor: pointer;
+    border-color: transparent;
+}

@@ -1,0 +1,202 @@
+main{
+ z-index: 3 ;
+    height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 100px;
+}
+
+
+.pajarito{
+display: flex;
+text-decoration: none;
+list-style: none;
+
+}
+.hojap{
+    
+display: flex;
+flex-direction: row;
+
+margin-top: 60%;
+}
+.hoja1{
+
+    width: 200px;
+    height: 200px;
+    background-color:  rgb(58, 196, 102);
+    border-radius: 100%;
+    margin-top: 30%;
+    margin-left: 20% ;
+}
+
+.hoja2{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(58, 196, 102);
+    border-radius: 100%;
+    margin-top: 25%;
+    margin-right: -3%;
+}
+.hoja3{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(58, 196, 102);
+    border-radius: 100%;
+    margin-top: 25%;
+
+}
+.hoja4{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(58, 196, 102);
+    border-radius: 100%;
+    margin-top: 25%;
+    margin-left: -2%;
+}
+.hoja5{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(58, 196, 102);
+    border-radius: 100%;
+    margin-top: 25%;
+    margin-right: 15%;
+
+}
+.hoja6{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(58, 196, 102);
+    border-radius: 100%;
+    margin-top: 600px;
+    margin-bottom: 20%;
+}
+.hoja7{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(58, 196, 102);
+    border-radius: 100%;
+    margin-top: 600px;
+    margin-left: -15%;
+    margin-bottom: 15%;
+}
+
+.hojas{
+    z-index: 3;
+    background-color: rgb(58, 196, 102);
+    width: 1100px;
+    height: 1000px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   margin-top: -50%;
+}
+
+.abus{
+display: flex;
+flex-direction: row;
+margin-left: 150px;
+margin-top: 50px;
+justify-content: center;
+align-items: center;
+}
+
+.padres{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    margin-top: 100px;
+}
+
+p1{
+    background-color: rgb(58, 196, 102);
+    width: 300px;
+    height: 300px;
+    border-radius: 70%;
+    justify-content: center;
+    align-items: center;
+}
+p2{
+    background-color: rgb(58, 196, 102);
+    width: 300px;
+    height: 300px;
+    border-radius: 70%;
+    margin-right: 200px;
+    margin-top: 800px;
+}
+
+p3{
+
+    background-color: rgb(58, 196, 102);
+    width: 100px;
+    height: 100px;
+    border-radius: 70%;
+    justify-content: center;
+    align-items: center;
+    margin-left: -20%;
+
+}
+p4{
+
+    background-color: rgb(58, 196, 102);
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    background-color: crimson;
+    width: 100px;
+    height: 100px;
+    border-radius: 70%;
+    text-align: center;
+    margin: 50px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+
+
+
+.tronco {
+    margin-top: -10%;
+    display: flex;
+    width: 50rem;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.tronco .centro{
+    width: 700px;
+    background-color: brown;
+    height: 700px;
+    margin: -10%;
+}
+
+.tronco .lados{
+    z-index: 1;
+    width: 30%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: white;
+}
+.padre{
+display: flex;
+flex-direction: row;
+
+
+}
+.hermanos{
+    display: flex;
+flex-direction: row;
+
+}
+
+
+

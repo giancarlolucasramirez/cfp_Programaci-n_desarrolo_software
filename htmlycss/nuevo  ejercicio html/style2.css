@@ -1,0 +1,15 @@
+.encabezado{
+display: flex;
+justify-content: center;
+color:blue;
+
+}
+
+.descripsion{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: small;
+}
+.color{
+    background-color: beige;
+}
+

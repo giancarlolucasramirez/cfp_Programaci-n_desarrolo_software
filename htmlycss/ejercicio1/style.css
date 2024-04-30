@@ -1,0 +1,70 @@
+
+.art{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    
+}
+.lista{
+    
+
+    font-size: large;
+    font-family: Georgia;
+     
+    color: rgb(3, 3, 3);
+    margin-left: 20px;  
+}
+
+.margin {
+
+    margin-left: 0cqh;
+}
+
+.pad {
+
+    padding-right: 200px;
+}
+
+.align {
+
+    letter-spacing: 30px;
+    text-align: justify;
+}
+
+.marg {
+
+
+    margin-bottom: 30px;
+
+}
+
+.div {
+
+    width: 500PX;
+    height: 100px;
+ 
+
+}
+.father {
+    border: 50px;
+    background-color: rgb(47, 216, 238) ;
+    display: flex;
+    flex-direction:column-reverse;
+    flex-wrap: wrap-reverse ;
+    justify-content: flex-end;
+    color: black; */
+    display: flex;
+    flex-direction: row;
+} 
+
+
+
+footer{
+    background-color: rgba(24, 0, 121, 0.726);
+ margin-left: -25px;
+margin-top: 200px;
+}
+.foto{
+
+    width: 1400px;
+}

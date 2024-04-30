@@ -1,0 +1,35 @@
+.wiki{
+font-family: 'Gill Sans';
+font-size: large;
+}
+
+.libre{
+    font-family: 'Gill Sans';
+    font-size: large;
+    
+
+}
+.imput{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: max(1.4285714em,20px);
+    min-width: 20px;
+    min-height: 20px;
+    width:2em;
+    height: 1.4285714em;
+    display: inline-block;
+    vertical-align: text-bottom;
+   background-image: url("data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"%23202122\"><path d=\"M12.2 13.6a7 7 0 111.4-1.4l5.4 5.4-1.4 1.4zM3 8a5 5 0 1010 0A5 5 0 003 8\"/></svg>"); 
+
+}
+.navegador{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   margin-bottom: 100px ;
+}
+a{
+    text-decoration: none;
+}
+img{
+}

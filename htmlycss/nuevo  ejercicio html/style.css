@@ -1,0 +1,18 @@
+.parrafo {
+    color: green;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    border: 20 px;
+}
+
+.encabezado {
+    align-content: center;
+    color: blueviolet;
+}
+img{
+width: 500;
+height: 500px;
+}

@@ -1,0 +1,139 @@
+* {
+    background-color: aquamarine;
+}
+/* encabezado*/
+#header {
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
+    background-color: aqua;
+}
+header:hover {
+    color: rgb(199, 25, 243);
+}
+/* navegador*/
+.navegador {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px;
+}
+.a {
+    text-decoration: none;
+}
+a:visited {
+    color: black;
+}
+a:hover {
+    color: rgb(228, 8, 217);
+}
+/* parrafos*/
+.div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border: 100px;
+}
+
+.pi {
+    margin: 80px;
+    display: flex;
+    justify-content: flex-start;
+    width: 300px;
+    margin-top: 30px;
+}
+.p1 {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 20px;
+    font-family: Arial;
+}
+
+.p2 {
+    margin: 20px;
+    font-family: 'Lucida Sans';
+}
+
+.p3 {
+    margin: 20px;
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Trebuchet MS';
+    font-size: medium;
+}
+
+/* formulario*/
+form {
+    display: flex;
+    justify-content: center;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+label:hover {
+    color: blueviolet;
+}
+
+.tamaño {
+    font-family: Tahoma;
+    font-size: medium;
+    width: 10%;
+    display: flex;
+    justify-content: left;
+    margin: 20px;
+}
+.estilo {
+    border-radius: 10px;
+
+}
+
+li {
+    list-style: none;
+}
+
+legend:hover {
+    color: blueviolet;
+}
+
+button:hover {
+    color: rgb(173, 95, 247);
+}
+
+[href] {
+    font-family: 'Times New Roman';
+    font-size: medium;
+    text-decoration: aqua;
+}
+[email] {
+
+    color: aquamarine;
+
+}
+.navs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    border-color: rgb(235, 13, 180);
+}
+
+.letra {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+fieldset {
+    margin: 2pc;
+
+}
+.envío {
+    width: 5%;
+    margin-top: -1%;
+    display: flex;
+    justify-content: center;
+}
+
+
