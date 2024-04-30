@@ -182,7 +182,7 @@ margin-top: 30px;
 }  
 .degradado-transparente{
     width: 500px;
-    height: 600px;
+    height: 800px;
 }
 .contenido-principal{
   width: 400px;
@@ -204,7 +204,7 @@ margin-top: 30px;
 }
 .Donbosco{
 width: 300px;
-height: 600px;
+height: 800px;
 
 }
 .banner{
@@ -230,7 +230,7 @@ height: 600px;
 .botones{
   display: flex;
   flex-direction: column;
-
+    margin-right: -50PX;
 }
 .button12{
     width: 170px;
