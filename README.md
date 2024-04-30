@@ -10,11 +10,13 @@
 ## [recursivas](./pseudocodigo/recursiva/)
 
 # ejercicios html y css 
-## [ejercicio1](./htmlycss/ejercicio1/)
+## [ejercicio1](./htmlycss/ejercicio%201/)
 ## [ejercicio2](./htmlycss/ejercicio%202/)
-## [ejercicio3](./htmlycss/ejercicio3/)
-## [ejercicio4](./htmlycss/ejercicio4/)
+## [ejercicio3](./htmlycss/ejercicio%203/)
+## [ejercicio4](./htmlycss/ejercicio%204/)
 ## [ejercicio5](./htmlycss/ejercicio%205/)
+## [ejercicio10](./htmlycss/ejercicio%2010/)
+## [ejercicio_11-20](./htmlycss/ejercicios%20del%2011-20/)
 
 
 
