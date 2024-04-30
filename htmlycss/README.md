@@ -46,7 +46,6 @@ alinee el texto con cada sección. Utilizará los márgenes, el relleno y
 la posición del fondo para crear el efecto. Este es un ejemplo de un
 sitio web de paralaje
 
-
 1. Cree una página HTML básica y use CSS para cambiar el tamaño de fuente y el color
 del texto.
 2. Experimente con diferentes selectores de CSS (por ejemplo, selectores de clase,
@@ -65,3 +64,5 @@ anchos de borde.
 posicionamiento absoluto y relativo.
 10. Cree un formulario simple y use CSS para diseñar sus elementos, como los campos de
 entrada y el botón de envío.
+
+
