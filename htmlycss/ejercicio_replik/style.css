@@ -222,10 +222,9 @@ margin-top: 90px;
     height: 200px;
 }
 .js-imagen{
-    margin: 18px;
+   margin: 19px;
     position: relative;
-    margin-top: 3px;
-    margin-left: -25px;
+    
 }
 .botones{
   display: flex;
@@ -238,7 +237,14 @@ margin-top: 90px;
     font-size: 20px;
     margin-top: 5px;
 }
-.boton1{
+#boton1{
 background-color: transparent;
+border-style: groove;
+border-color: white;
 }
+}
+
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+    
 }
