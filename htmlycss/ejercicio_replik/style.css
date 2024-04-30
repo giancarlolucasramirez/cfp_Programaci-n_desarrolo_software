@@ -192,7 +192,7 @@ margin-top: 30px;
 
 .nav1{
     gap: 200px;
-    margin-left: 40px;
+    margin-left: 50px;
 }
 .logo-plural{
     display: flex;
@@ -205,6 +205,7 @@ margin-top: 30px;
 .Donbosco{
 width: 300px;
 height: 500px;
+margin-top: 90px;
 
 }
 .banner{
@@ -217,7 +218,6 @@ height: 500px;
     display: flex;
     flex-direction: column;
     margin-right: -125px;
-    margin-top: 25px;
     width: 200px;
     height: 200px;
 }
@@ -237,5 +237,8 @@ height: 500px;
     height: 60px;
     font-size: 20px;
     margin-top: 5px;
+}
+.boton1{
+background-color: transparent;
 }
 }
