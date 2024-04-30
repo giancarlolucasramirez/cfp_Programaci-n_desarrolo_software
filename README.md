@@ -1,4 +1,4 @@
-# cfp_programacion_desarollo_software
+# cfp_programacion_desarollo_software_pseudocódigo
 
 ## [Lectura_escritura](./pseudocodigo/escritura_lectura)
 ## [Condiciones](./pseudocodigo/condiciones/)
