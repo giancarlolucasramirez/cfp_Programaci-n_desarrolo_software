@@ -23,7 +23,7 @@
 ## [ejercicio_11-20](./htmlycss/ejercicios%20del%2011-20/)
 ## [ejercicicio21](./htmlycss/ejercicio_replik/)
 
-## [ejercicio22](./htmlycss/animacion_de_ojos/)
+## [ejercicio22](./htmlycss/ejercicio23/)
 
 
 
