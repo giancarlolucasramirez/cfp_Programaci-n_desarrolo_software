@@ -9,4 +9,6 @@
 ## [funciones](./pseudocodigo/funciones/)
 ## [recursivas](./pseudocodigo/recursiva/)
 
+# ejercicios html y css 
+## [html](./htmlycss/)
 
