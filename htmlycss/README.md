@@ -47,21 +47,21 @@ la posición del fondo para crear el efecto. Este es un ejemplo de un
 sitio web de paralaje
 
 
-11. Cree una página HTML básica y use CSS para cambiar el tamaño de fuente y el color
+1. Cree una página HTML básica y use CSS para cambiar el tamaño de fuente y el color
 del texto.
-12. Experimente con diferentes selectores de CSS (por ejemplo, selectores de clase,
+2. Experimente con diferentes selectores de CSS (por ejemplo, selectores de clase,
 selectores de ID, selectores de elementos) para diseñar diferentes elementos en la
 página.
-13. Use CSS para controlar el diseño de la página, incluida la adición de relleno y márgenes
+3. Use CSS para controlar el diseño de la página, incluida la adición de relleno y márgenes
 a los elementos, y la configuración de un ancho fijo o fluido.
-14. Cree una barra de navegación simple usando HTML y CSS.
-15. Usa CSS para agregar un color de fondo o una imagen a una página.
-16. Experimente con unidades de medida CSS, como píxeles, ems y porcentajes.
-17. Cree un efecto de desplazamiento simple usando CSS, como cambiar el color de fondo
+4. Cree una barra de navegación simple usando HTML y CSS.
+5. Usa CSS para agregar un color de fondo o una imagen a una página.
+6. Experimente con unidades de medida CSS, como píxeles, ems y porcentajes.
+7. Cree un efecto de desplazamiento simple usando CSS, como cambiar el color de fondo
 de un elemento cuando un usuario pasa el cursor sobre él.
-18. Use CSS para agregar un borde a un elemento y experimente con diferentes estilos y
+8. Use CSS para agregar un borde a un elemento y experimente con diferentes estilos y
 anchos de borde.
-19. Practique el uso de CSS para colocar elementos en una página, incluido el uso de
+9. Practique el uso de CSS para colocar elementos en una página, incluido el uso de
 posicionamiento absoluto y relativo.
-20. Cree un formulario simple y use CSS para diseñar sus elementos, como los campos de
+10. Cree un formulario simple y use CSS para diseñar sus elementos, como los campos de
 entrada y el botón de envío.
