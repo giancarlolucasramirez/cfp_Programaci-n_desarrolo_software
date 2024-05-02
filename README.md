@@ -21,7 +21,7 @@
 ## [ejercicio9](./htmlycss/Ejercicio9/)
 ## [ejercicio10](./htmlycss/ejercicio%2010/)
 ## [ejercicio_11-20](./htmlycss/ejercicios%20del%2011-20/)
-## [ejercicicio21](./htmlycss/ejercicio_replik/)
+## [ejercicicio21](./htmlycss/ejercicio21/)
 
 ## [ejercicio22](./htmlycss/ejercicio23/)
 
