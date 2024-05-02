@@ -1,9 +1,13 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-body{
+
+.responsive{
+    display: none;
+}
+body {
     background-color: #000;
 }
 
@@ -15,13 +19,15 @@ body{
     color: white;
     align-self: center;
 }
-.logo-plural{
-display: flex;
-flex-direction: row;
-height: 15px;
-align-self: center;
-margin-top: -8px;
+
+.logo-plural {
+    display: flex;
+    flex-direction: row;
+    height: 15px;
+    align-self: center;
+    margin-top: -8px;
 }
+
 .logo {
     margin-right: 15px;
     width: 20px;
@@ -44,25 +50,25 @@ button {
     margin-top: -4px;
 }
 
-.contenido-principal{
+.contenido-principal {
     width: 100%;
     height: 40%;
-    background: rgb(131,58,180);
-background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    background: rgb(131, 58, 180);
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
 }
 
 .degradado-transparente {
     width: 100%;
-    height: 90%;
+    height: 91%;
     position: absolute;
-    background: rgb(131,58,180);
-    background: linear-gradient(90deg, rgba(131,58,180,0.5) 0%, rgba(253,29,29,0.5) 50%, rgba(252,176,69,0.5) 100%);
+    background: rgb(131, 58, 180);
+    background: linear-gradient(90deg, rgba(131, 58, 180, 0.5) 0%, rgba(253, 29, 29, 0.5) 50%, rgba(252, 176, 69, 0.5) 100%);
 }
 
-.banner{
+.banner {
     display: flex;
     justify-content: flex-start;
-   
+
 }
 
 .flex {
@@ -108,20 +114,20 @@ background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%,
 
     width: 800px;
     height: 50px;
-  
+
 }
 
 .cursos {
     background-color: rgb(0, 0, 0);
     display: flex;
     align-items: end;
-
+    height: 400px;
 }
 
 .js-imagen {
     width: 350px;
     height: 200px;
-    background-color:#1E1E1E;
+    background-color: #1E1E1E;
     margin-left: 20px;
     display: flex;
     flex-direction: column;
@@ -136,21 +142,23 @@ background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%,
     height: 70px;
     position: relative;
     margin-top: -40px;
-    
+
 }
 
 
-.angular-logo{
+.angular-logo {
     margin-left: 280px;
     width: 70px;
     height: 70px;
     position: relative;
     margin-top: -40px;
 }
-.color{
-    color: #6F194B   ;
+
+.color {
+    color: #6F194B;
 }
-.trending{
+
+.trending {
 
     width: 350px;
     height: 200px;
@@ -161,90 +169,194 @@ background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%,
     justify-content: space-between;
     margin-bottom: 10px;
     color: white;
-    
-}
-
-#tamaño-trending{
-margin-top: 30px;
-
 
 }
-#learn{
+
+#tamaño-trending {
+    margin-top: 30px;
+}
+
+#learn {
     margin-top: -80px;
 }
-  /* aqui empieza el tamaño de mobil*/
+
+
+.responsive2{
+    display: flex;
+}
+.responsive3{
+display: none;
+
+}
+/* aqui empieza el tamaño de mobil*/
 @media screen and (max-width: 767px) {
-  
-  .cursos{
-    display: flex;
-    flex-direction: column;
+
+    .cursos {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .degradado-transparente {
+        width: 500px;
+        height: 800px;
+    }
+
+    .contenido-principal {
+        width: 400px;
+        height: 800px;
+    }
+    .nav1 {
+        gap: 200px;
+        margin-left: 50px;
+    }
+    #responsive4{
+        display: none;
+    }
+    .responsive{
+        position: relative;
+        display: flex;
+        margin-left: -167px;
+    }
+    .logo-plural {
+        display: flex;
+        flex-direction: row;
+        font-size: larger;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+    }
+
+    .Donbosco {
+        width: 300px;
+        height: 500px;
+        margin-top: 90px;
+
+    }
+
+    .banner {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row-reverse;
+    }
+
+    .build {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-right: -125px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .js-imagen {
+        margin: 19px;
+        position: relative;
+
+    }
+
+    .botones {
+        display: flex;
+        flex-direction: column;
+        margin-right: -50PX;
+    }
+
+    .button12 {
+        width: 170px;
+        height: 60px;
+        font-size: 20px;
+        margin-top: 5px;
+    }
+
     
-}  
-.degradado-transparente{
-    width: 500px;
-    height: 800px;
-}
-.contenido-principal{
-  width: 400px;
-  height: 800px;
-
-}
-
-.nav1{
-    gap: 200px;
-    margin-left: 50px;
-}
-.logo-plural{
-    display: flex;
-    flex-direction: row;
-    font-size: larger;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-}
-.Donbosco{
-width: 300px;
-height: 500px;
-margin-top: 90px;
-
-}
-.banner{
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row-reverse;
-}
-.build{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin-right: -125px;
-    width: 200px;
-    height: 200px;
-}
-.js-imagen{
-   margin: 19px;
-    position: relative;
-    
-}
-.botones{
-  display: flex;
-  flex-direction: column;
-    margin-right: -50PX;
-}
-.button12{
-    width: 170px;
-    height: 60px;
-    font-size: 20px;
-    margin-top: 5px;
-}
-#boton1{
-background-color: transparent;
-border-style: groove;
-border-color: white;
-}
 }
 
 
 @media screen and (min-width:768px) and (max-width:1024px) {
-    
+    body {
+        width: 200px;
+        height: 700px;
+    }
+
+    .degradado-transparente {
+        width: 236px;
+        height: 200px;
+    }
+
+    .contenido-principal {
+        width: 316px;
+        height: 200px;
+    }
+
+    .Donbosco {
+        width: 100px;
+        height: 200px;
+    }
+    .cursos{
+        height: 210px;
+    }
+    .logo-plural {
+        margin-right: 50px;
+    }
+
+    .build {
+        font-size: 9px;
+        margin-left: -10px;
+    }
+
+    .botones {
+        width: 180px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        gap: 0px;
+        margin-right: 20px;
+    }
+
+    .button12 {
+        margin-top: 10px;
+        width: 200px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    #responsive4{
+        display: none   ;
+    }
+
+    .responsive{
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+        gap: 2px;
+    }
+    body{
+        width: 300px;
+    }
+    .nav2{
+        display: none;
+    }
+    .responsive2{
+        display: none;
+    }
+    .trending{
+        position: relative;
+        margin-left: 7px;
+    }
+
+    .move{
+        margin-top: 30px;
+    }
+    .color{
+        font-size: 10px;
+    }
+    p{
+       font-size: 9px; 
+    }
+
+    .responsive3{
+        display: block;
+    }
+   
 }
+

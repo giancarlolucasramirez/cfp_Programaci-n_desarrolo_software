@@ -1,0 +1,40 @@
+body{
+    background-color:#EBE1F5;
+
+}
+header {
+    font-size: 5px;
+    display: flex;
+    justify-content: center;
+    background-color:#EBE1F5;
+    height: 50px;
+}
+.container{
+    background-color: #FFFFFF;
+ width: 1057px;   
+}
+    
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.icons-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.despegue{
+    
+    width: 200px;
+    height: 100px;
+}
+
+.formulario{
+    background-color:#23056E;
+    color: white;
