@@ -18,7 +18,7 @@
 
         <ul>
             <div class="icons-name">
-                <li> <i class="bi bi-car-front"></i>  </li>
+                <li> <i class="bi bi-car-front"></i> </li>
                 <li>alojamiento</li>
             </div>
             <div class="icons-name">
@@ -26,25 +26,105 @@
                 <li>vuelos</li>
             </div>
             <div class="icons-name">
-                <li><i class="bi bi-backpack"></i>  </li>
+                <li><i class="bi bi-backpack"></i> </li>
                 <li>paquetes</li>
             </div>
             <div class="icons-name">
-                <li><i class="bi bi-house-heart-fill"></i>  </li>
+                <li><i class="bi bi-house-heart-fill"></i> </li>
                 <li>alquileres</li>
             </div>
             <div class="icons-name">
-                <li><i class="bi bi-activity"></i>  </li>
+                <li><i class="bi bi-activity"></i> </li>
                 <li>actividades</li>
             </div>
-         
+
         </ul>
     </div>
-    <div class="formulario">
-     <h2>Vuelos con reserva flexible</h2>   
-     <h4>Encuentra pasajes aéreos con la posibilidad de cambiar las fechas de vuelo</h4>   
+    <div class="container1">
+        <div class="formulario">
+            <h2>Vuelos con reserva flexible</h2>
+            <h4>Encuentra pasajes aéreos con la posibilidad de cambiar las fechas de vuelo</h4>
+            <form action="">
+                <div class="fields">
+                    <ul id="time-of-day" style="list-style: none;">
+                        <li class="radio">
+                            <label>
+                                <input name="time-radio" type="radio" value="1" class="user-selection">
+
+                                ida vuelta
+                            </label>
+                        </li>
+                        <li class="radio">
+                            <label>
+                                <input name="time-radio" type="radio" value="1" class="user-selection">
+
+                                solo ida
+                            </label>
+                        </li>
+                        <li class="radio">
+                            <label>
+                                <input name="time-radio" type="radio" value="1" class="user-selection">
+
+                                multidestino
+                            </label>
+                        </li>
+
+                    </ul>
+                    <div class="label-container">
+                        <div class="labels">
+                            <label class="labels">Origen</label>
+                            <input type="text" placeholder=" 🔘Quito,Ecuador" autocomplete="do-not-autofill"
+                                class="labels">
+
+                        </div>
+                        <div class="labels">
+                            <label class="labels">Destino </label>
+                            <input type="text" placeholder="🚩 ingrese hacia donde quiere ir"
+                                autocomplete="do-not-autofill" class="labels">
+
+                        </div>
+
+                        <div class="labels">
+                            <label class="labels">Destino </label>
+                            <input type="text" placeholder="📅 ida" autocomplete="do-not-autofill" class="labels">
+
+                        </div>
+                        <div class="labels">
+
+                            <input type="text" placeholder="📅 vuelta" class="labels-1">
+
+                        </div>
+                        <div class="labels">
+                            <label class="labels">pasajeros y clase </label>
+                            <input type="text" placeholder="🚹 una persona, económica" autocomplete="do-not-autofill" class="labels">
+                            
+                        </div>
+                        <div>
+                            <button type="button" class="botonsito-buscar">
+                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" size="xsm" class="sbotonsito-buscar ">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.3333 1C5.36269 1 1.33325 5.02944 1.33325 10C1.33325 14.9706 5.36269 19 10.3333 19C12.4583 19 14.4113 18.2635 15.9509 17.0319L21.6262 22.7071C22.0167 23.0976 22.6498 23.0976 23.0404 22.7071C23.4309 22.3166 23.4309 21.6834 23.0404 21.2929L17.3652 15.6177C18.5968 14.078 19.3333 12.125 19.3333 10C19.3333 5.02944 15.3038 1 10.3333 1ZM3.33325 10C3.33325 6.13401 6.46726 3 10.3333 3C14.1992 3 17.3333 6.13401 17.3333 10C17.3333 13.866 14.1992 17 10.3333 17C6.46726 17 3.33325 13.866 3.33325 10Z" fill="#343A3D"></path>
+                                </svg>
+                                <em class="botonsito-buscar">Buscar</em></button>
+                                
+                        </div>
+                       
+                    </div>
+                    <label class="checkbox">
+                        <input name="feeling-check" value="4" type="checkbox" class="user-selection">
+                        todavía no he decidido la fecha
+                    </label>
+                    <label>
+                        <input name="feeling-check" value="4" type="checkbox" class="user-selection">
+                        personas mayores o con discapacidad
+                    </label>
+                </div>
+            </form>
+        </div>
+
     </div>
 
+    </form>
+    </div>
 
 
 </body>
