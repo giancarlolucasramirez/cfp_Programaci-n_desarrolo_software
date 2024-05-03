@@ -104,3 +104,15 @@ ul {
 .container2{
    margin-left: -90px; 
 }
+.inicio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.consulta{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-self: flex-end;
+    gap: 13px;
+}
