@@ -24,8 +24,8 @@
 ## [ejercicicio21](./htmlycss/ejercicio21/)
 
 ## [ejercicio22](./htmlycss/ejercicio22/)
-## [ejercicio23] (./htmlycss/ejercicio23)
-## [ejercicio24] (./htmlycss/ejercicio24)
+## [ejercicio23] (./htmlycss/ejercicio23/)
+## [ejercicio24] (./htmlycss/ejercicio24/)
 
 
 
