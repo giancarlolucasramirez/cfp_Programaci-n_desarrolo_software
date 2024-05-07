@@ -232,3 +232,25 @@ ul {
 
 
 }
+
+
+@media screen and (min-width:767px) and (max-width:1023px) {
+.responsive{
+    display: none;
+}
+
+.emergente {
+    width: 200px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #ffffff;
+    position: absolute;
+    border-radius: 20px;
+    margin-top: 25px;
+    margin-left: -250px;
+ 
+}
+}
