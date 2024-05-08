@@ -233,24 +233,82 @@ ul {
 
 }
 
-
-@media screen and (min-width:767px) and (max-width:1023px) {
-.responsive{
+.responsive2 {
     display: none;
 }
 
-.emergente {
-    width: 200px;
-    height: 160px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    background-color: #ffffff;
-    position: absolute;
-    border-radius: 20px;
-    margin-top: 25px;
-    margin-left: -250px;
- 
-}
+@media screen and (min-width:767px) and (max-width:1023px) {
+    .responsive {
+        display: none;
+    }
+
+    .emergente {
+        width: 300px;
+        height: 160px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        background-color: #ffffff;
+        position: absolute;
+        border-radius: 20px;
+        margin-top: 25px;
+        margin-left: -290px;
+
+    }
+
+    .responsive {
+        display: none;
+    }
+
+    .consulta {
+        width: 140px;
+        position: relative;
+
+    }
+
+    .label-container {
+        display: none;
+    }
+
+    .label-container1 {
+        display: block;
+
+    }
+
+    .label-ipad {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .labels {
+        width: 365px;
+        height: 80px;
+    }
+
+    .labels2 {
+        width: 200px;
+        height: 80px;
+    }
+
+    .fechas {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .checkbox {
+        display: none;
+    }
+
+    .responsive2 {
+        display: flex;
+    }
+    .formulario{
+        height: 700px;
+    }
+    .checkbox2{
+        display: flex;
+      
+    }
 }

@@ -27,7 +27,7 @@ background: linear-gradient(45deg, rgba(91,0,255,1) 0%, rgba(45,167,235,1) 50%, 
   height: 100%;
   background-color: rgb(14, 59, 44);
   transform-style: preserve-3d;
-  transition: all 1s;
+  transition: all 0.8s;
 }
 
 .celdas:hover{

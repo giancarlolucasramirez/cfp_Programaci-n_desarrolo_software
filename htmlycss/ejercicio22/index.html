@@ -24,18 +24,17 @@
 
 
                 <div class="consulta">
-                    <li>🚹</li>
-                    <li>🧳</li>
-                    <li>❓</li>
+                    <li class="responsive2">🚹</li>
+                    <li class="responsive2">🧳</li>
+                    <li class="responsive2">❓</li>
 
-                    <div class="responsive">
-                        <li>🚹iniciar sesión </li>
-                        <li> 🧳mis viajes</li>
-                        <li>❓ayuda</li>
-                    </div>
+                    <li class="responsive">🚹iniciar sesión </li>
+                    <li class="responsive"> 🧳mis viajes</li>
+                    <li class="responsive">❓ayuda</li>
                     <div class="emergente">
 
-                        <h3>gestiona tu reserva</h3>
+                        <h3>gestiona tu reserva<i class="bi bi-kanban-fill"></i></h3>
+
                         <h4>entra con tu usuario para ver información actualizada y opciones de cambio o cancelación de
                             mis viajes</h4>
                     </div>
@@ -67,6 +66,7 @@
             </ul>
     </nav>
     </div>
+
     <div class="container1">
         <div class="formulario">
             <h2>Vuelos con reserva flexible</h2>
@@ -97,35 +97,41 @@
                         </li>
 
                     </ul>
-                    <div class="label-container">
-                        <div class="labels">
-                            <label class="labels">Origen</label>
-                            <input type="text" placeholder=" 🔘Quito,Ecuador" autocomplete="do-not-autofill"
-                                class="labels">
+                    <div class="label-container  label-container1">
+                        <div class="label-ipad">
+                            <div class="labels ">
+                                <label class="labels">Origen</label>
+                                <input type="text" placeholder=" 🔘Quito,Ecuador" autocomplete="do-not-autofill"
+                                    class="labels">
 
+                            </div>
+                            <div class="labels">
+                                <label class="labels">Destino </label>
+                                <input type="text" placeholder="🚩 ingrese hacia donde quiere ir"
+                                    autocomplete="do-not-autofill" class="labels">
+
+                            </div>
                         </div>
-                        <div class="labels">
-                            <label class="labels">Destino </label>
-                            <input type="text" placeholder="🚩 ingrese hacia donde quiere ir"
-                                autocomplete="do-not-autofill" class="labels">
+                        <div class="label-ipad">
+                            
+                                <div class="labels ">
+                                    <label class="labels">fechas </label>
+                                    <input type="text" placeholder="📅 ida" autocomplete="do-not-autofill"
+                                        class="labels2">
 
-                        </div>
+                                </div>
+                                <div class="labels">
 
-                        <div class="labels">
-                            <label class="labels">Destino </label>
-                            <input type="text" placeholder="📅 ida" autocomplete="do-not-autofill" class="labels">
+                                    <input type="text" placeholder="📅 vuelta" class="labels-1">
 
-                        </div>
-                        <div class="labels">
+                                </div>
+                            
+                            <div class="labels">
+                                <label class="labels">pasajeros y clase </label>
+                                <input type="text" placeholder="🚹 una persona, económica"
+                                    autocomplete="do-not-autofill" class="labels" readonly>
 
-                            <input type="text" placeholder="📅 vuelta" class="labels-1">
-
-                        </div>
-                        <div class="labels">
-                            <label class="labels">pasajeros y clase </label>
-                            <input type="text" placeholder="🚹 una persona, económica" autocomplete="do-not-autofill"
-                                class="labels" readonly>
-
+                            </div>
                         </div>
                         <div>
                             <button type="button" class="botonsito-buscar">
@@ -140,11 +146,11 @@
                         </div>
 
                     </div>
-                    <label class="checkbox">
+                    <label class="checkbox checkbox2">
                         <input name="feeling-check" value="4" type="checkbox" class="user-selection">
                         todavía no he decidido la fecha
                     </label>
-                    <label>
+                    <label class="checkbox checkbox2">
                         <input name="feeling-check" value="4" type="checkbox" class="user-selection">
                         personas mayores o con discapacidad
                     </label>
