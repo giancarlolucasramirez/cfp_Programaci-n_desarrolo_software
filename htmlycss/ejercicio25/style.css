@@ -1,7 +1,8 @@
 body {
-    margin: 0;
-    padding: 0;
-    gap: 0;
+    
+    margin: 0px;
+    padding: 0px;
+    gap: 0px;
     background: rgb(255, 255, 255);
     background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(136, 151, 169, 1) 77%);
     display: flex;
@@ -65,7 +66,7 @@ body {
     background-size: 100%;
     background-repeat: no-repeat;
     color: white;
-    margin-top: -160px;
+    margin-top: -200px;
 }
 
 .bi-arrow-left-circle {
@@ -111,11 +112,11 @@ p{
 .tiquet {
     position: relative;
     border-style: solid;
-    border-color: #FDFCFA;
+    border-color: #a5acb6;
     width: 200px;
     height: 50px;
     margin-left: 20px;
-    background-color: black;
+    background-color: transparent;
     color: white;
     display: flex;
     text-align: center;
@@ -125,7 +126,7 @@ p{
 }
 
 .circulo {
-    margin-top: 200px;
+    margin-top: 170px;
     margin-left: 70px;
     width: 25px;
     height: 25px;
@@ -160,7 +161,6 @@ color: transparent;
     height: 0;
 }
 .cuadro{
-    width: 170px;
     height: 40px;
     background-color: #7F8FA6;
     border-style: solid;
@@ -196,5 +196,12 @@ img{
     width: 100px;
     height: 100px;
     display: flex;
+    justify-content: center;
+}
+.anajo{
+    display: flex;
+    flex-direction: row;
+}
+.bi-person{
     justify-content: center;
 }
