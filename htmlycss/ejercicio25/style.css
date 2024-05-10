@@ -2,56 +2,199 @@ body {
     margin: 0;
     padding: 0;
     gap: 0;
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(136, 151, 169, 1) 77%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
-
-    width: 100vw;
-    height: 100vh;
-    background: rgb(255,255,255);
-background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(136,151,169,1) 77%);
+    width: 100%;
+    height: 100%;
+    background-image: url(pngwing.com.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .logo-hero {
-    position:absolute;
-    margin-left: 50px;
-}
-.beimax{
     position: absolute;
-    margin-left: 350px;
-    width: 550px;
-    height: 640px;
+    margin-left: 50px;
+    width: 161px;
+    height: 174px;
 }
-.icons{
+
+.beimax {
+    position: absolute;
+    margin-left: 460px;
+    width: 340px;
+    height: 530px;
+}
+
+.icons {
     position: relative;
     display: flex;
-    justify-content: flex-end   ;
+    justify-content: flex-end;
     align-items: center;
     color: #A0B2BF;
-    margin-right: 10px;
+
+    margin-right: 20px;
     gap: 25px;
 }
-.redes{
+
+.redes {
     width: 100px;
+    height: 25.09px;
 }
-.niño{
+
+.niño {
+    width: 0px;
+    height: 10px;
     position: relative;
     margin-top: 400px;
     margin-left: 20px;
-    color:white;
+    color: white;
 }
-.trailer{
+
+.trailer {
+    position: absolute;
     width: 190px;
     height: 100px;
-    background-image:  url(../image/hiro.jpg )   ;
+    background-image: url(../image/hiro.jpg );
     background-size: 100%;
     background-repeat: no-repeat;
     color: white;
+    margin-top: -160px;
 }
-.bi{
+
+.bi-arrow-left-circle {
     position: relative;
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    margin-top: -200px;
-    margin-left: 520px;
+    margin-top: -320px;
+    margin-left: 920px;
+    width: 0px;
+}
+
+.bi-arrow-right-circle {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -320px;
+    margin-left: 930px;
+
+}
+
+.flecha {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flecha i {
+    color: #CECDD3;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    margin-top: 12px;
+}
+p{
+    color: white;
+    margin-left: 20px;
+}
+.tiquet {
+    position: relative;
+    border-style: solid;
+    border-color: #FDFCFA;
+    width: 200px;
+    height: 50px;
+    margin-left: 20px;
+    background-color: black;
+    color: white;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+.circulo {
+    margin-top: 200px;
+    margin-left: 70px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+}
+
+.circulo #circulo-relleno{
+background-color: white;
+border-radius: 100%;
+}
+.user-selection{
+background-color: transparent;
+color: transparent;
+}
+.audio{
+    margin-left: 20px;
+    margin-top: 10px;
+    color: white;
+    width: 100px;
+}
+
+.horas{
+    display: flex;
+    flex-direction: row;
+    list-style: none ;
+    gap: 15px;
+    margin-top: 200px;
+    margin-left: 60px;
+    color: white;
+    width: 0;
+    height: 0;
+}
+.cuadro{
+    width: 170px;
+    height: 40px;
+    background-color: #7F8FA6;
+    border-style: solid;
+    border-color: #C2CEDC;
+    display: flex;
+    flex-direction: column;
+    
+}
+img{
+    width: 0px;
+    height: 0px;
+}
+.ciculo1{
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border-radius: 100%;
+    border-style: solid;
+    border-color: #C2CEDC;
+    display: flex;
+    justify-content: center;
+}
+.ciculo2{
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #C2CEDC;
+}
+.padre-c{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
 }
