@@ -43,7 +43,9 @@ body {
     margin-right: 20px;
     gap: 25px;
 }
-
+.twiter{
+    margin-left: 230px;
+}
 .redes {
     width: 100px;
     height: 25.09px;
@@ -66,7 +68,7 @@ body {
     background-size: 100%;
     background-repeat: no-repeat;
     color: white;
-    margin-top: -200px;
+    margin-top: -280px;
 }
 
 .bi-arrow-left-circle {
@@ -115,7 +117,7 @@ p{
     border-color: #a5acb6;
     width: 200px;
     height: 50px;
-    margin-left: 20px;
+    margin-left: 60px;
     background-color: transparent;
     color: white;
     display: flex;
@@ -123,10 +125,11 @@ p{
     align-items: center;
     justify-content: center;
     gap: 35px;
+    margin-top: -200px;
 }
 
 .circulo {
-    margin-top: 170px;
+    margin-top: 154px;
     margin-left: 70px;
     width: 25px;
     height: 25px;
@@ -148,26 +151,45 @@ color: transparent;
     color: white;
     width: 100px;
 }
-
+.personajes i{
+    color: white;
+}
 .horas{
+    position:a;
     display: flex;
     flex-direction: row;
     list-style: none ;
     gap: 15px;
-    margin-top: 200px;
+    margin-top: 255px;
     margin-left: 60px;
     color: white;
     width: 0;
     height: 0;
+    text-align: center;
+}
+.hora{
+    margin-right: 20px;
+}
+.hora-1{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    margin-top: 230px;
+    list-style: none;
+    gap: 50px;
+    margin-left: 70px;
 }
 .cuadro{
     height: 40px;
+    width: 150px;
     background-color: #7F8FA6;
     border-style: solid;
     border-color: #C2CEDC;
     display: flex;
     flex-direction: column;
-    
+    text-align: center ;
+    justify-content: center;
+    align-items: center;
 }
 img{
     width: 0px;
@@ -198,10 +220,17 @@ img{
     display: flex;
     justify-content: center;
 }
-.anajo{
-    display: flex;
-    flex-direction: row;
+
+.personajes{
+display: flex;
+justify-content: center ;
 }
-.bi-person{
-    justify-content: center;
+.abajo{
+display: flex;
+justify-content: space-between;
+}
+#legal{
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
 }
