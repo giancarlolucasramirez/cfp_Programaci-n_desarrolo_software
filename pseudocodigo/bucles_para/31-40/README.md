@@ -90,7 +90,7 @@
 
 
 <h2> ejercicio36 </h2>
-<h3> mayor de tres  números   </h3>
+<h3> potencia de 2   </h3>
 <pre>
     <code> 
         Algoritmo sin_titulo
