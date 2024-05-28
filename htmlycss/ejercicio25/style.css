@@ -1,5 +1,6 @@
 body {
-    
+    width: 100%;
+    height: 100%;
     margin: 0px;
     padding: 0px;
     gap: 0px;
@@ -228,6 +229,7 @@ justify-content: center ;
 .abajo{
 display: flex;
 justify-content: space-between;
+margin-top: 160px;
 }
 #legal{
     background-color: transparent;
