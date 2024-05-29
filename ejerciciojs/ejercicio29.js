@@ -9,8 +9,8 @@ largo = 0
 let contador = 0;
 
 
-while (largo < 3) {
-    contra = aleatorio(1,105);
+while (largo < 8) {
+    contra = aleatorio(9999995,10000000);
     let string = String(contra);
     largo = string.length;
     contador += 1;
