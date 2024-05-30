@@ -1,16 +1,15 @@
-let caracter;
-let encontrado ;
-encontrado = false;
+let caracter = 'a';
+let encontrado = false;
 
-let array = ["a","b","c","d","e","f","g"]
+let array = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
 
-caracter = "a"
+array.forEach(function(elemento) {
+    if (elemento === caracter) {
+        console.log('El carácter', caracter, 'se encuentra en el array');
+        encontrado = true;
+    }
+});
 
-for(i = 0;i <1;i++){
-    if( array[i] === caracter){
-        console.log("el caracter", caracter,"se encuentra en el array ");
-    }else{
-        console.log("el caracter", caracter,"no se encuentra en el array");
-      }
-} 
-
+if (!encontrado) {
+    console.log('El carácter', caracter, 'no se encuentra en el array');
+}

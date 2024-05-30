@@ -20,4 +20,4 @@ for(i = 0;i<5;i++){
 }
 
 console.log("la suma de la diagonal principal es : ", diagonal_principal);
-console.log(diagonal_secundaria);
+console.log("la suma de la diagonal secudaria es : ",diagonal_secundaria);
