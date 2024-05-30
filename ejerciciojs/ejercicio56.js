@@ -2,7 +2,7 @@ let fila_actual, columna_actual;
 let laberinto = new Array(10);
 
 for (let fila = 0; fila < 10; fila++) {
-    laberinto[fila] = new Array(10);
+    laberinto[fila]  = new Array(10);
     for (let columna = 0; columna < 10; columna++) {
         laberinto[fila][columna] = 1;
     }
@@ -34,6 +34,8 @@ laberinto[9][4] = 0;
 
 fila_actual = 0;
 columna_actual = 0;
+
+
 for (let fila = 0; fila < 10; fila++) {
     let filaTexto = '';
     for (let columna = 0; columna < 10; columna++) {
@@ -44,4 +46,5 @@ for (let fila = 0; fila < 10; fila++) {
         filaTexto += laberinto[fila][columna] + " ";
     }
     console.log(filaTexto); 
+
 }
