@@ -50,14 +50,11 @@ function solveSudoku(sudoku, fila = 0, columna = 0) {
     return false;
 }
 
-// Crear un tablero de Sudoku vacío
 let sudoku = Array.from({ length: 9 }, () => Array(9).fill(0));
 
-// Llenar con algunos números para probar el solucionador
 sudoku[0][0] = 5;
 sudoku[1][1] = 6;
 sudoku[2][2] = 7;
-// ... agregar más números según sea necesario ...
 
 if (solveSudoku(sudoku)) {
     console.log('Sudoku resuelto:');
