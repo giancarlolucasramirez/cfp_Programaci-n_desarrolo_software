@@ -55,4 +55,16 @@ INSERT INTO productos VALUES(11,'Nike Magista Onda FG Soccer Cleats',1077.00,100
 INSERT INTO productos VALUES(12 ,'Espinilleras Wilson WSP 2000',55.00,150,2);
 
 
+INSERT INTO productos VALUES(13,'silla de madera ',35.00,100,3);
+INSERT INTO productos VALUES(14,'sofá pequeño',500.00,100,3);
+INSERT INTO productos VALUES(15,'Sofá chenille taupé ',1500.00,100,3);
+INSERT INTO productos VALUES(16,'Mesa de comedor para 8 personas ',10500.00,100,3);
+INSERT INTO productos VALUES(17,'Sillón Alpha white Bouclé',5500.00,300,3);
+INSERT INTO productos VALUES(18,'Gabinete de la India',6200.00,100,3);
 
+INSERT INTO productos VALUES(19,'Lavadora  ',8500.00,200,4);
+INSERT INTO productos VALUES(20,'Microhondas',590.00,130,4);
+INSERT INTO productos VALUES(21,'Plancha de Vapor',150.00,300,4);
+INSERT INTO productos VALUES(22,'Licuadora',350.00,110,4);
+INSERT INTO productos VALUES(23,'Batidora',250.00,310,4);
+INSERT INTO productos VALUES(24,'Tostadora',120.00,140,4);
