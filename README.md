@@ -24,7 +24,7 @@
 ## [ejercicicio21](./modulo1//htmlycss/ejercicio21/)
 ## [ejercicio22](./modulo1//htmlycss/ejercicio22/)
 ## [ejercicio23](./modulo1//htmlycss/ejercicio23/)
-## [ejercicio22](./modulo1//htmlycss/ejercicio24/)
+## [ejercicio24](./modulo1//htmlycss/ejercicio24/)
 
 
 
