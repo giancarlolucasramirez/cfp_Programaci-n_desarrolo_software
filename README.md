@@ -1,13 +1,13 @@
 # cfp_programacion_desarollo_software_pseudocódigo
 
-## [Lectura_escritura](./pseudocodigo/escritura_lectura)
-## [Condiciones](./pseudocodigo/condiciones/)
-## [mientras_repetir](./pseudocodigo/mientras_repetir/)
-## [bucles_para](./pseudocodigo/bucles_para/)
-## [vectores](./pseudocodigo/vectores/)
-## [Matrices](./pseudocodigo/matrices/)
-## [funciones](./pseudocodigo/funciones/)
-## [recursivas](./pseudocodigo/recursiva/)
+## [Lectura_escritura](./modulo1//pseudocodigo/escritura_lectura)
+## [Condiciones](./modulo1/pseudocodigo/condiciones/)
+## [mientras_repetir](./modulo1/pseudocodigo/mientras_repetir/)
+## [bucles_para](./modulo1/pseudocodigo/bucles_para/)
+## [vectores](./modulo1/pseudocodigo/vectores/)
+## [Matrices](./modulo1/pseudocodigo/matrices/)
+## [funciones](./modulo1/pseudocodigo/funciones/)
+## [recursivas](./modulo1/pseudocodigo/recursiva/)
 
 # ejercicios html y css 
 ## [ejercicio1](./htmlycss/ejercicio%201/)
