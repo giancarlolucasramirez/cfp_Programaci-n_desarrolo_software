@@ -10,7 +10,7 @@
 ## [recursivas](./modulo1/pseudocodigo/recursiva/)
 
 # ejercicios html y css 
-## [ejercicio1](./htmlycss/ejercicio%201/)
+## [ejercicio1](./modulo1/htmlycss/ejercicio%201/)
 ## [ejercicio2](./htmlycss/ejercicio%202/)
 ## [ejercicio3](./htmlycss/ejercicio%203/)
 ## [ejercicio4](./htmlycss/ejercicio%204/)
