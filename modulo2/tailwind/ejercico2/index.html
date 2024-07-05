@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" class="font-serif">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+    <table class=" w-full border-collapse text-lift  	border-4 border-purple-300 border-solid ">
+      
+        <thead class="p-4 ">
+            <tr class="border-b-2">
+                <th><input name="time-radio" type="radio" value="1"
+                    class="user-selection "></th>
+                <th scope="col" class=""> name</th>
+                <th scope="col " class="tracking-2">policy</th>
+                <th scope="col" class="tracking-2">policy status</th>
+                <th scope="col" class="tracking-2">Destination</th>
+                <th scope="col" class="tracking-2">status</th>
+                <th scope="col" class="tracking-2"> Progress</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+
+            </tr>
+        </thead>
+        <tbody class="text-center">
+
+
+            <tr class="border-b-2">
+                <td>
+                    <input name="time-radio" type="radio" value="1"
+                        class="user-selection ">
+                </td>
+                <td class="flex justify-center gap-x-6 ">
+                    <div class="flex min-w-0 gap-x-4">
+
+                        <img class="h-12 w-12 flex-none rounded-full bg-gray-50"
+                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                            alt="">
+                        <div class="min-w-0 flex-auto">
+
+                            <p class="text-sm font-semibold leading-6 text-gray-900">Christian Ericssen</p>
+                            <p class="mt-1 truncate text-xs leading-5 text-gray-500">CFO</p>
+                        </div>
+                    </div>
+
+                </td>
+                <td> <div class="min-w-0 flex-auto">
+
+                    <p class="text-sm font-semibold leading-6 text-gray-900">$5,0000</p>
+                    
+                    <p class="mt-1 truncate text-xs leading-5 text-gray-500">Basic policy
+                    </p>
+                </div></td>
+                <td class="">
+                    <div class="mt-1 flex items-center gap-x-1.5 justify-center text-emerald-500 pr-10">
+                        <i class="bi bi-circle-fill"></i>
+                        <p class="text-xs leading-5">Approve</p>
+                    </div>
+                </td>
+                <td>Huston,US</td>
+                <td>
+                    <div class="mt-1 flex items-center gap-x-1.5 justify-center">
+                        <div class="flex-none rounded-full  p-1 text-emerald-500">
+                            <i class="bi bi-circle-fill"></i>                        </div>
+                        <p class="text-xs leading-5 text-emerald-500">active</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="mt-1 flex items-center gap-x-1.5 justify-center">
+                        <div class="flex-none rounded-full  p-1 text-cyan-400">
+                            <i class="bi bi-circle-fill"></i>                        </div>
+                        <p class="text-xs leading-5 text-cyan-400">On Track</p>
+                    </div>
+                </td> 
+                <div>
+                <td class="">  <i class="bi bi-pencil-fill flex-none rounded-full bg-cyan-200 p-1  text-cyan-400 "> </td>
+                    <td><i class="bi bi-trash text-gray-500" ></i> </td>
+                </div>
+            </tr>
+
+            <tr class="border-b-2">
+                <td>
+                    <input name="time-radio" type="radio" value="1"
+                        class="user-selection ">
+                </td>
+                <td class="flex justify-center  gap-x-6 ">
+                    <div class="flex min-w-0 gap-x-4">
+
+                        <img class="h-12 w-12 flex-none rounded-full bg-gray-50"
+                    src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt="">
+                        <div class="min-w-0 flex-auto">
+
+                            <p class="text-sm font-semibold leading-6 text-gray-900">Angie E.Swift</p>
+                            <p class="mt-1 truncate text-xs leading-5 text-gray-500">vp of saen</p>
+                        </div>
+                    </div>
+
+                </td>
+                <td> <div class="min-w-0 flex-auto">
+
+                    <p class="text-sm font-semibold leading-6 text-gray-900">$20,0000</p>
+                    <p class="mt-1 truncate text-xs leading-5 text-gray-500">all inclusive policy
+                    </p>
+                </div></td>
+                <td>
+                    <div class="mt-1 flex items-center gap-x-1.5 justify-center text-yellow-500  flex align-start ">
+                        <i class="bi bi-circle-fill"></i>
+                        <p class="text-xs leading-5">awaiting Approve</p>
+                    </div>
+                </td>
+                <td>Huston,US</td>
+                <td>
+                        <p class="text-xs leading-5 text-gray-500">waiting</p>
+                </td>
+                <td>
+      
+                        <p class="text-xs leading-5 text-gray-400">waiting</p>
+            
+                </td> 
+                <div>
+                <td class="w-5 h-5">  <i class="bi bi-pencil-fill flex-none rounded-full bg-cyan-200 p-1 text-cyan-500 "> </td>
+                    <td><i class="bi bi-trash text-gray-500" ></i> </td>
+                </div>
+            </tr>
+
+            <tr class="border-b-2">
+                <td>
+                    <input name="time-radio" type="radio" value="1"
+                        class="user-selection ">
+                </td>
+                <td class="flex justify-center  gap-x-6 ">
+                    <div class="flex min-w-0 gap-x-4">
+
+                        <img class="h-12 w-12 flex-none rounded-full bg-gray-50"
+                    src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt="">
+                        <div class="min-w-0 flex-auto">
+
+                            <p class="text-sm font-semibold leading-6 text-gray-900">Ronald Koeman</p>
+                            <p class="mt-1 truncate text-xs leading-5 text-gray-500">activociry board</p>
+                        </div>
+                    </div>
+
+                </td>
+                <td> <div class="min-w-0 flex-auto">
+
+                    <p class="text-sm font-semibold leading-6 text-gray-900">$5,0000</p>
+                    <p class="mt-1 truncate text-xs leading-5 text-gray-500">basic policy
+                    </p>
+                </div></td>
+                <td>
+                    <div class="mt-1 flex items-center gap-x-1.5 justify-center text-emerald-500 pr-10">
+                        <i class="bi bi-circle-fill"></i>
+                        <p class="text-xs leading-5">Approve</p>
+                    </div>
+                </td>
+                <td>Huston,US</td>
+                <td>
+                   
+                        <p class="text-xs leading-5 text-gray-500">canceled</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="mt-1 flex items-center gap-x-1.5 justify-center">
+                        <div class="flex-none rounded-full  p-1 text-cyan-400">
+                            <i class="bi bi-circle-fill"></i>                        </div>
+                        <p class="text-xs leading-5 text-cyan-400">canceled</p>
+                    </div>
+                </td> 
+                <div>
+                <td class="w-5 h-5">  <i class="bi bi-pencil-fill flex-none rounded-full bg-emerald-500/20 p-1  "> </td>
+                    <td><i class="bi bi-trash text-gray-500" ></i> </td>
+                </div>
+            </tr>
+
+            <tr class="border-b-2">
+                <td>
+                    <input name="time-radio" type="radio" value="1"
+                        class="user-selection ">
+                </td>
+                <td class="flex justify-center gap-x-6 ">
+                    <div class="flex min-w-0 gap-x-4">
+
+                        <img class="h-12 w-12 flex-none rounded-full bg-gray-50"
+                            src="HD-wallpaper-perfil-cool-tecnologia.jpg"
+                            alt="">
+                        <div class="min-w-0 flex-auto">
+
+                            <p class="text-sm font-semibold leading-6 text-gray-900">June Simmons</p>
+                            <p class="mt-1 truncate text-xs leading-5 text-gray-500">Social Content Manager</p>
+                        </div>
+                    </div>
+
+                </td>
+                <td> <div class="min-w-0 flex-auto">
+
+                    <p class="text-sm font-semibold leading-6 text-gray-900">$5,0000</p>
+                    <p class="mt-1 truncate text-xs leading-5 text-gray-500">Basic Policy
+                    </p>
+                </div></td>
+                <td>
+                    <div class="mt-1 flex items-center gap-x-1.5 justify-center text-red-500 pr-10  ">
+                        <i class="bi bi-circle-fill"></i>
+                        <p class="text-xs leading-5">Reyected</p>
+                    </div>
+                </td>
+                <td>Huston,US</td>
+                <td>
+                                       </div>
+                        <p class="text-xs leading-5 text-gray-500">reyected</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="mt-1 flex items-center gap-x-1.5 justify-center">
+                        <div class="flex-none rounded-full  p-1 text-red-400">
+                            <i class="bi bi-circle-fill"></i>                        </div>
+                        <p class="text-xs leading-5 text-red-400">overdue</p>
+                    </div>
+                </td> 
+                <div>
+                <td class="w-5 h-5">  <i class="bi bi-pencil-fill flex-none rounded-full bg-emerald-500/20 p-1  "> </td>
+                    <td><i class="bi bi-trash text-gray-500" ></i> </td>
+                </div>
+            </tr>
+
+
+            <tr class="border-b-2">
+                <td>
+                    <input name="time-radio" type="radio" value="1"
+                        class="user-selection ">
+                </td>
+                <td class="flex justify-center gap-x-6 ">
+                    <div class="flex min-w-0 gap-x-4">
+
+                        <img class="h-12 w-12 flex-none rounded-full bg-gray-50"
+                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="">
+                        <div class="min-w-0 flex-auto">
+
+                            <p class="text-sm font-semibold leading-6 text-gray-900">Ben West</p>
+                            <p class="mt-1 truncate text-xs leading-5 text-gray-500">Account Manager</p>
+                        </div>
+                    </div>
+
+                </td>
+                <td> <div class="min-w-0 flex-auto">
+
+                    <p class="text-sm font-semibold leading-6 text-gray-900">$25,0000</p>
+                    <p class="mt-1 truncate text-xs leading-5 text-gray-500">Basic Policy
+                    </p>
+                </div></td>
+                <td>
+                    <div class="mt-1 flex items-center gap-x-1.5 justify-center text-yellow-500 ">
+                        <i class="bi bi-circle-fill"></i>
+                        <p class="text-xs leading-5">Awaiting Approved</p>
+                    </div>
+                </td>
+                <td>Boston,US</td>
+                <td>
+                    <div class="mt-1 flex items-center gap-x-1.5 justify-center">
+                        <div class="flex-none rounded-full  p-1 text-emerald-500">
+                            <i class="bi bi-circle-fill"></i>                        </div>
+                        <p class="text-xs leading-5 text-emerald-500">active</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="mt-1 flex items-center gap-x-1.5 justify-center">
+                        <div class="flex-none rounded-full  p-1 text-cyan-400">
+                            <i class="bi bi-circle-fill"></i>                        </div>
+                        <p class="text-xs leading-5 text-cyan-400">On Track</p>
+                    </div>
+                </td> 
+                <div>
+                <td class="w-5 h-5">  <i class="bi bi-pencil-fill flex-none rounded-full bg-emerald-500/20 p-1  "> </td>
+                    <td><i class="bi bi-trash text-gray-500" ></i> </td>
+                </div>
+            </tr>
+
+            <tr class="border-b-2"> 
+                <td>
+                    <input name="time-radio" type="radio" value="1"
+                        class="user-selection ">
+                </td>
+                <td class="flex justify-center gap-x-6 ">
+                    <div class="flex min-w-0 gap-x-4">
+
+                        <img class="h-12 w-12 flex-none rounded-full bg-gray-50"
+                        src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="">
+                        <div class="min-w-0 flex-auto">
+
+                            <p class="text-sm font-semibold leading-6 text-gray-900">Natalie Quest</p>
+                            <p class="mt-1 truncate text-xs leading-5 text-gray-500">Social Content Manager</p>
+                        </div>
+                    </div>
+
+                </td>
+                <td> <div class="min-w-0 flex-auto">
+
+                    <p class="text-sm font-semibold leading-6 text-gray-900">$30,0000</p>
+                    <p class="mt-1 truncate text-xs leading-5 text-gray-500">All Inclusive Policy
+                    </p>
+                </div></td>
+                <td>
+                    <div class="mt-1 flex items-center gap-x-1.5 justify-center text-red-500 pr-10">
+                        <i class="bi bi-circle-fill"></i>
+                        <p class="text-xs leading-5">Reyected</p>
+                    </div>
+                </td>
+                <td>Huston,US</td>
+                <td>
+                    
+                        <p class="text-xs leading-5 text-gray-500">Reyected</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="mt-1 flex items-center gap-x-1.5 justify-center">
+                        <div class="flex-none rounded-full  p-1 text-red-400">
+                            <i class="bi bi-circle-fill"></i>                        </div>
+                        <p class="text-xs leading-5 text-red-400">overdue</p>
+                    </div>
+                </td> 
+                <div>
+                <td class="w-5 h-5">  <i class="bi bi-pencil-fill flex-none rounded-full bg-emerald-500/20 p-1  "> </td>
+                    <td><i class="bi bi-trash text-gray-500" ></i> </td>
+                </div>
+            </tr>
+
+            <tr class="border-b-2">
+                <td>
+                    <input name="time-radio" type="radio" value="1"
+                        class="user-selection ">
+                </td>
+                <td class="flex justify-center gap-x-6 pr-5 ">
+                    <div class="flex min-w-0 gap-x-4">
+                        <img class="h-12 w-12 flex-none rounded-full bg-gray-50"
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="">
+                        <div class="min-w-0 flex-auto">
+
+                            <p class="text-sm font-semibold leading-6 text-gray-900">Thomas Perez</p>
+                            <p class="mt-1 truncate text-xs leading-5 text-gray-500">CEO</p>
+                        </div>
+                    </div>
+
+                </td>
+                <td> <div class="min-w-0 flex-auto">
+
+                    <p class="text-sm font-semibold leading-6 text-gray-900">$45,0000</p>
+                    <p class="mt-1 truncate text-xs leading-5 text-gray-500">All Inclusive Policy
+                    </p>
+                </div></td>
+                <td>
+                    <div class="mt-1 flex items-center gap-x-1.5 justify-center text-emerald-500 pr-10">
+                        <i class="bi bi-circle-fill"></i>
+                        <p class="text-xs leading-5">Approve</p>
+                    </div>
+                </td>
+                <td>New York,US</td>
+                <td>
+                    <div class="mt-1 flex items-center gap-x-1.5 justify-center">
+                        <div class="flex-none rounded-full  p-1 text-emerald-500">
+                            <i class="bi bi-circle-fill"></i>                        </div>
+                        <p class="text-xs leading-5 text-emerald-500">Done</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="mt-1 flex items-center gap-x-1.5 justify-center">
+                        <div class="flex-none rounded-full  p-1 text-cyan-400">
+                            <i class="bi bi-circle-fill"></i>                        </div>
+                        <p class="text-xs leading-5 text-cyan-400">On Track</p>
+                    </div>
+                </td> 
+                <div>
+                <td class="w-5 h-5">  <i class="bi bi-pencil-fill flex-none rounded-full bg-emerald-500/20 p-1  "> </td>
+                    <td><i class="bi bi-trash text-gray-500" ></i> </td>
+                </div>
+            </tr>
+
+
+        </tbody>
+
+    </table>
+
+  
+
+</body>
+
+</html>
