@@ -45,3 +45,18 @@ padding: 20px;
  padding: 10px;
 
 }
+
+#boton-inicio-pausa.iniciar,
+#boton-nicio-pausa.iniciar i{
+ background-color: #08e008;   
+}
+
+#boton-inicio-pausa.pausar,
+#boton-nicio-pausa.pausar i{
+ background-color: #ffdc00;   
+}
+
+#boton-reiniciar{
+  background-color: red;  
+}
+
