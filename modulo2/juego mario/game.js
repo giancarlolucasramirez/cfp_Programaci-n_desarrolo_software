@@ -250,9 +250,6 @@ function update() {
     }, 2000)
   }
 
-  else{
-    this.sound.play('gameover')
-    
-  }
+
 
 } 
