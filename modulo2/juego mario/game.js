@@ -14,7 +14,7 @@ const config = {
   scene: {
     preload,
     create,
-    update  
+    update
   }
 };
 
@@ -26,16 +26,16 @@ function preload() {
   this.load.image('floorbicks', 'assets/scenery/overworld/floorbricks.png');
   this.load.image('bush', 'assets/scenery/overworld/bush2.png');
   this.load.image('castle', 'assets/scenery/castle.png');
-  this.load.image('mushroom', 'assets/collectibles/super-mushroom.png')
   this.load.spritesheet('goomba', 'assets/entities/overworld/goomba.png', { frameWidth: 16, frameHeight: 16 });
   this.load.spritesheet('coin', 'assets/collectibles/coin.png', { frameWidth: 16, frameHeight: 16 });
   this.load.spritesheet('mario', 'assets/entities/mario.png', { frameWidth: 18, frameHeight: 16 });
-  this.load.spritesheet('super', 'assets/entities/mario-grown.png',{frameWidth:16, frameHeight: 16})
-
   this.load.audio('goomba-stomp', 'assets/sound/effects/goomba-stomp.wav');
   this.load.audio('hurry-up-theme', 'assets/sound/music/overworld/hurry-up-theme.mp3');
   this.load.audio('gameover', 'assets/sound/music/gameover.mp3');
   this.load.audio('coin', 'assets/sound/effects/coin.mp3');
+  this.load.audio('hongo', 'assets/sound/effects/consume-powerup.mp3');
+
+  this.load.image('mushroom', 'assets/collectibles/super-mushroom.png'); // Carga del hongo
 }
 
 function create() {
@@ -80,16 +80,17 @@ function create() {
 
   function onHitEnemy(mario, enemy) {
     if (mario.body.touching.down && enemy.body.touching.up) {
-      enemy.anims.play('goomba-Dead', true);
-      enemy.body.setVelocity(0, 0); // Detener el movimiento del Goomba
-      enemy.body.allowGravity = false; // Desactivar la gravedad para el Goomba
-      mario.setVelocityY(-200);
-      this.sound.play('goomba-stomp');
-      addToScore(200,enemy,this)
-
-      this.time.delayedCall(500, () => { // Tiempo para reproducir la animación
-        enemy.disableBody(true, true);
-      }, [], this);
+      if (!enemy.isDead) {
+        enemy.isDead = true; // Marcar el Goomba como muerto
+        enemy.anims.play('goomba-Dead', true);
+        enemy.body.setVelocity(0, 0); // Detener el movimiento del Goomba
+        enemy.body.allowGravity = false; // Desactivar la gravedad para el Goomba
+        mario.setVelocityY(-200);
+        this.sound.play('goomba-stomp');
+        this.time.delayedCall(500, () => { // Tiempo para reproducir la animación
+          enemy.disableBody(true, true);
+        }, [], this);
+      }
     } else {
       this.mario.isDead = true;
       this.mario.anims.play('mario-dead');
@@ -108,8 +109,6 @@ function create() {
     }
   }
 
-
-  
   this.anims.create({
     key: 'coin',
     frames: this.anims.generateFrameNumbers('coin', { start: 0, end: 3 }),
@@ -123,18 +122,6 @@ function create() {
     setXY: { x: 150, y: 150, stepX: 200 }
   });
 
-  this.mushroom = this.physics.add.staticGroup({
-    key: 'mushroom',
-    repeat: 3,
-    setXY: { x: 190, y: 204, stepX: 200 }
-  });
-
-  function Eat_mushroom(mario, mushroom){
-    coin.disableBody(true, true);
-    
-  }
-
-   
   this.coins.children.iterate(function (child) {
     child.anims.play('coin', true);
   });
@@ -145,62 +132,50 @@ function create() {
     coin.disableBody(true, true);
     this.sound.play('coin'); // Reproducir sonido al recolectar la moneda
 
-    addToScore(100,coin,this)
-  }
-
-
-  function addToScore (scoreToAdd,origin,game) {
-    const scoreText = game.add.text(
-      origin.x,
-      origin.y,
-      scoreToAdd,
+    const scoreText = this.add.text(
+      coin.x,
+      coin.y,
+      '100',
       {
         fontFamily: 'pixel',
         fontSize: config.width / 25
       }
-
-      
     );
 
-    const secondStep = () =>{
-      game.tweens.add({
-        targets: scoreText,
-        duration: 100,
-        alpha: 0,
-        onComplete: () => {
-          scoreText.destroy()
-        }
-      })
-    }
-
-    const finalStep = () =>{
-      scoreText.destroy()
-
-    }
-
-    game.tweens.add({
+    this.tweens.add({
       targets: scoreText,
-      duration: 100,
-      y: scoreText.y - 20,
-      onComplete: secondStep
-
-    })
+      duration: 500,
+      y: scoreText.y - 20
+    });
   }
 
+  // Creación de los hongos
+  this.mushrooms = this.physics.add.staticGroup({
+    key: 'mushroom',
+    repeat: 2,
+    setXY: { x: 300, y: config.height - 32, stepX: 400 }
+  });
+
+  this.mushrooms.children.iterate(function (child) {
+    child.setOrigin(0, 1).refreshBody();
+  });
+
+  // Añadir la colisión entre Mario y los hongos
+  this.physics.add.overlap(this.mario, this.mushrooms, collectMushroom, null, this);
+
+  function collectMushroom(mario, mushroom) {
+    mushroom.disableBody(true, true);
+    this.sound.play('hongo'); // Puedes cambiar esto a otro sonido si tienes uno para los hongos
+
+    // Aquí puedes agregar cualquier efecto que el hongo tenga sobre Mario, como hacerlo crecer
+    mario.setScale(1.5); // Ejemplo de hacer a Mario más grande
+  }     
   this.anims.create({
     key: 'gumball-walk',
-    frames: this.anims.generateFrameNumbers('goomba', { start: 1, end: 3 }),
+    frames: this.anims.generateFrameNumbers('mario', { start: 1, end: 3 }),
     frameRate: 12,
     repeat: -1
   });
-
-  this.anims.create({
-    key: 'grown-idleal',
-    frames: this.anims.generateFrameNumbers('super', { start: 0, end: 0 }),
-    frameRate: 12,
-    repeat: -1
-  });
-
 
   this.anims.create({
     key: 'mario-walk',
@@ -243,6 +218,8 @@ function create() {
     repeat: -1
   });
 }
+
+
 let isJump = false;
 
 function update() {
