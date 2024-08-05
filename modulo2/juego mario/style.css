@@ -1,8 +1,16 @@
-#game {
+body{
     display: flex;
     justify-content: center;
     height: 100vh;
     width: 100%;
     background: black;
     padding-top: 5px;
+    font-family: 'pixel', sans-serif;
+}
+
+
+
+@font-face{
+    font-family: 'pixel';
+    src: url('/assets/fonts/SuperMario.ttf')
 }
