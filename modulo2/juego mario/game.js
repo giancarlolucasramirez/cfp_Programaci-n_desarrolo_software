@@ -29,12 +29,13 @@ function preload() {
   this.load.spritesheet('goomba', 'assets/entities/overworld/goomba.png', { frameWidth: 16, frameHeight: 16 });
   this.load.spritesheet('coin', 'assets/collectibles/coin.png', { frameWidth: 16, frameHeight: 16 });
   this.load.spritesheet('mario', 'assets/entities/mario.png', { frameWidth: 18, frameHeight: 16 });
+  this.load.spritesheet('super', 'assets/entities/mario.png', { frameWidth: 18, frameHeight: 16 });
+
   this.load.audio('goomba-stomp', 'assets/sound/effects/goomba-stomp.wav');
   this.load.audio('hurry-up-theme', 'assets/sound/music/overworld/hurry-up-theme.mp3');
   this.load.audio('gameover', 'assets/sound/music/gameover.mp3');
   this.load.audio('coin', 'assets/sound/effects/coin.mp3');
   this.load.audio('hongo', 'assets/sound/effects/consume-powerup.mp3');
-
   this.load.image('mushroom', 'assets/collectibles/super-mushroom.png'); // Carga del hongo
 }
 
@@ -168,6 +169,10 @@ function create() {
     this.sound.play('hongo'); // Puedes cambiar esto a otro sonido si tienes uno para los hongos
 
     // Aquí puedes agregar cualquier efecto que el hongo tenga sobre Mario, como hacerlo crecer
+ 
+
+    mario.isGround = true
+    mario.anims.play
     mario.setScale(1.5); // Ejemplo de hacer a Mario más grande
   }     
   this.anims.create({
@@ -190,13 +195,39 @@ function create() {
   });
 
   this.anims.create({
+    key: 'mario-jump',
+    frames: this.anims.generateFrameNumbers('mario', { start: 5, end: 5 }),
+    frameRate: 12,
+    repeat: -1
+  });
+
+  this.anims.create({
     key: 'mario-dead',
     frames: [{ key: 'mario', frame: 4 }]
   });
 
   this.anims.create({
-    key: 'mario-jump',
-    frames: this.anims.generateFrameNumbers('mario', { start: 5, end: 5 }),
+    key: 'gumball-walk',
+    frames: this.anims.generateFrameNumbers('super', { start: 1, end: 3 }),
+    frameRate: 12,
+    repeat: -1
+  });
+
+  this.anims.create({
+    key: 'mario-grown-walk',
+    frames: this.anims.generateFrameNumbers('super', { start: 1, end: 3 }),
+    frameRate: 12,
+    repeat: -1
+  });
+
+  this.anims.create({
+    key: 'mario-grown-idle',
+    frames: [{ key: 'super', frame: 0 }]
+  });
+
+  this.anims.create({
+    key: 'mario-grown-jump',
+    frames: this.anims.generateFrameNumbers('super', { start: 5, end: 5 }),
     frameRate: 12,
     repeat: -1
   });
@@ -217,6 +248,13 @@ function create() {
     frameRate: 12,
     repeat: -1
   });
+
+
+
+  this.anims.create({
+    key: 'mario-grown-idle',
+   frames: [{ key: 'super', frame:  0}]
+  });
 }
 
 
@@ -224,6 +262,7 @@ let isJump = false;
 
 function update() {
   if (this.mario.isDead) return;
+
   if (this.keys.up.isDown && this.mario.body.touching.down) {
     isJump = true;
     this.mario.anims.play('mario-jump', true);
