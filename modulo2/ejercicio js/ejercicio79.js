@@ -16,7 +16,7 @@ function busquedaBinaria(arr, objetivo, inicio, fin) {
     return busquedaBinaria(arr, objetivo, medio + 1, fin);
 }
 
-let arreglo = [1, 5, 1, 7, 9, 11];
-let objetivo = 7;
+let arreglo = [1, 2, 3,4, 5, 9, 11,18,30,45,40,50];
+let objetivo = 50;
 let resultado = busquedaBinaria(arreglo, objetivo, 0, arreglo.length - 1);
-console.log(resultado); 
+console.log(resultado);
