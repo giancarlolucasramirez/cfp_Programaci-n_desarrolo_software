@@ -11,7 +11,7 @@ document.body.appendChild( renderer.domElement );
 
 //The Cylinder!
 
-var geometry = new THREE.CylinderGeometry( 5, 5, 20, 32 );
+var geometry = new THREE.BoxGeometry( 5, 5, 20, 32 );
 //Yellow
 var material = new THREE.MeshBasicMaterial( {color: 0xffff00} );
 var cylinder = new THREE.Mesh( geometry, material );
