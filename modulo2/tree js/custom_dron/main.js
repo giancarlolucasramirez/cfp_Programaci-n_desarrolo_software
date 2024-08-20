@@ -129,7 +129,7 @@ const animate = () => {
         ) {
             droneParts.helices.traverse(function (child) {
                 if (child.name === 'helice1') {
-                    child.rotation.y += 0.1;
+                    child.rotation.y += 0.4;
                 }
             });
         }
@@ -154,11 +154,13 @@ animate()
 }
 render(); */
 select.addEventListener('click', function () {
-    textarea.addEventListener("keydown", (e) => {
+    select.addEventListener("keydown", (e) => {
         if (!e.repeat) {
-          logMessage(`Key "${e.key}" pressed [event: keydown]`);
+            console.log(`Key "${e.key}" pressed [event: keydown]`);
         } else {
-          logMessage(`Key "${e.key}" repeating [event: keydown]`);
+            console.log(`Key "${e.key}" repeating [event: keydown]`);
         }
-      });
+    });
 })
+
+
