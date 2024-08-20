@@ -153,14 +153,13 @@ animate()
     });
 }
 render(); */
-select.addEventListener('click', function () {
-    select.addEventListener("keydown", (e) => {
-        if (!e.repeat) {
-            console.log(`Key "${e.key}" pressed [event: keydown]`);
-        } else {
-            console.log(`Key "${e.key}" repeating [event: keydown]`);
-        }
-    });
-})
+
+window.addEventListener("keydown", (e) => {
+    if (!e.repeat) {
+        console.log(`Key "${e.key}" pressed [event: keydown]`);
+    } else {
+        console.log(`Key "${e.key}" repeating [event: keydown]`);
+    }
+});
 
 
