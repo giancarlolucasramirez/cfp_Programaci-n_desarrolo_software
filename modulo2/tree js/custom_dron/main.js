@@ -1,12 +1,58 @@
 
-const select = document.querySelector('select');
+const motor = document.getElementById("motor")
+const helice = document.getElementById("helice")
+const camara = document.getElementById("camara")
 
 
+const values = [
+    {id:1, text:"motor 1",ruta:"./model/motor/Motor1.gltf"},
+    {id:2, text:"motor 2",ruta:"./model/motor/Motor2.gltf"},
+    {id:3, text:"motor 3",ruta:"./model/motor/Motor3.gltf"},
+    
+]
+const values2 = [
+    {id2:0, text2:"helice 1"},
+    {id2:1, text2:"helice 2"},
+    {id2:2, text2:"helice 3"},
+    
+]
+
+const values3 = [
+    {id3:0, text3:"camara 1"},
+    {id3:1, text3:"camara 2"},
+    {id3:2, text3:"camara 3"},
+    
+]
+
+values3.forEach(obj => {
+    const $option3 = document.createElement("option")
+    $option3.value = obj.id3
+    $option3.innerHTML = obj.text3
+    camara.appendChild($option3)
+})
+
+
+values2.forEach(obj => {
+    const $option2 = document.createElement("option")
+    $option2.value = obj.id2
+    $option2.innerHTML = obj.text2
+    helice.appendChild($option2)
+})
+
+
+values.forEach(obj => {
+    const $option = document.createElement("option")
+    $option.value = obj.id
+    $option.innerHTML = obj.text
+    motor.appendChild($option)
+})
+
+    
 var scene = new THREE.Scene();
 
 var camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 50);
 scene.add(camera);
-camera.position.set(-7, 5, 10);
+camera.position.set(-5, 5, 10);
 camera.lookAt(new THREE.Vector3());
 
 // Configuración del renderer
@@ -47,6 +93,24 @@ const droneParts = {
     camaras: new THREE.Group(),
 };
 
+motor.addEventListener("change", (event) => {
+    console.log(event.target.value);
+    console.log(values.find((e) => e.id == event.target.value).ruta);
+    loadModels(values.find((e) => e.id == event.target.value).ruta, droneParts.motor)  
+    groupParts.remove(gltf.scene);
+
+});
+
+function loadModels(ruta, groupParts) {
+    gltfLoader.load(ruta, function (gltf) {
+        groupParts.add(gltf.scene);
+    }, undefined, function (error) {
+        console.error('Error al cargar el modelo Base:', error);
+    });
+
+}
+
+
 gltfLoader.load('./model/base/Base.gltf', function (gltf) {
     droneParts.base.add(gltf.scene);
 }, undefined, function (error) {
@@ -58,12 +122,14 @@ gltfLoader.load('./model/cam/Cam1.gltf', function (gltf) {
 }, undefined, function (error) {
     console.error('Error al cargar el modelo Cam1:', error);
 });
+loadModels(values[0].ruta,droneParts.motor)
 
-gltfLoader.load('./model/motor/Motor2.gltf', function (gltf) {
-    droneParts.motor.add(gltf.scene);
-}, undefined, function (error) {
-    console.error('Error al cargar el modelo Motor2:', error);
-});
+
+// gltfLoader.load('./model/motor/Motor2.gltf', function (gltf) {
+//     droneParts.motor.add(gltf.scene);
+// }, undefined, function (error) {
+//     console.error('Error al cargar el modelo Motor2:', error);
+// });
 
 gltfLoader.load('./model/helices/Helice3.gltf', function (gltf) {
     gltf.scene.traverse(function (child) {
@@ -104,62 +170,91 @@ scene.add(light1);
 const al = new THREE.AmbientLight(0x208080, 0.61);
 scene.add(al);
 
+const clock = new THREE.Clock();
 
-const clock = new THREE.Clock()
+// velocidad y la dirección del dron
+const moveSpeed = 0.1;
+let movingUp = false;
+let movingDown = false;
+let movingLeft = false;
+let movingRight = false;
 
-const animate = () => {
-    const elapsedTime = clock.getElapsedTime()
-
-    const movement = Math.sin(elapsedTime)
-    droneParts.base.position.y = movement * 1
-    droneParts.camaras.position.y = movement * 1
-    droneParts.motor.position.y = movement * 1
-    droneParts.helices.position.y = movement * 1
-
-    droneParts.base.position.x = movement * 1
-    droneParts.camaras.position.x = movement * 1
-    droneParts.motor.position.x = movement * 1
-    droneParts.helices.position.x = movement * 1
-
-    try {
-        for (
-            let i = 0;
-            i < droneParts.helices.children.length;
-            i++
-        ) {
-            droneParts.helices.traverse(function (child) {
-                if (child.name === 'helice1') {
-                    child.rotation.y += 0.4;
-                }
-            });
-        }
-    } catch (error) { }
-    orbitControls.update()
-
-    //post processing render
-    renderer.render(scene, camera)
-    requestAnimationFrame(animate)
-}
-
-animate()
-/* function render() {
-    requestAnimationFrame(render);
-    renderer.render(scene, camera);
-
-    droneParts.helices.traverse(function (child) {
-        if (child.name === 'helice1') {
-            child.rotation.y += 0.1;
-        }
-    });
-}
-render(); */
-
+// detectar cuando se presiona una tecla
 window.addEventListener("keydown", (e) => {
-    if (!e.repeat) {
-        console.log(`Key "${e.key}" pressed [event: keydown]`);
-    } else {
-        console.log(`Key "${e.key}" repeating [event: keydown]`);
-    }
+    if (e.key === "ArrowUp" || e.code === "KeyW") {
+        movingUp = true;
+    } else if (e.key === "ArrowDown" || e.code === "KeyS") {
+        movingDown = true;
+    } else if (e.key === "ArrowLeft" || e.code === "KeyA") {
+        movingLeft = true;
+    } else if (e.key === "ArrowRight" || e.code === "KeyD") {
+        movingRight = true;
+    } 
+});
+
+// E detectar cuando se suelta una tecla
+window.addEventListener("keyup", (e) => {
+    if (e.key === "ArrowUp" || e.code === "KeyW") {
+        movingUp = false;
+    } else if (e.key === "ArrowDown" || e.code === "KeyS") {
+        movingDown = false;
+    } else if (e.key === "ArrowLeft" || e.code === "KeyA") {
+        movingLeft = false;
+    } else if (e.key === "ArrowRight" || e.code === "KeyD") {
+        movingRight = false;
+    } 
 });
 
 
+
+
+
+const animate = () => {
+    const elapsedTime = clock.getElapsedTime();
+
+    if (movingUp) {
+        // Subir el dron 
+        droneParts.base.position.y += moveSpeed;
+        droneParts.camaras.position.y += moveSpeed;
+        droneParts.motor.position.y += moveSpeed;
+        droneParts.helices.position.y += moveSpeed;
+    }
+
+    if (movingDown) {
+        // Bajar el dron 
+        droneParts.base.position.y -= moveSpeed;
+        droneParts.camaras.position.y -= moveSpeed;
+        droneParts.motor.position.y -= moveSpeed;
+        droneParts.helices.position.y -= moveSpeed;
+    }
+
+    if (movingLeft) {
+        // Mover el dron a la izquierda
+        droneParts.base.position.x -= moveSpeed;
+        droneParts.camaras.position.x -= moveSpeed;
+        droneParts.motor.position.x -= moveSpeed;
+        droneParts.helices.position.x -= moveSpeed;
+    }
+
+    if (movingRight) {
+        // Mover el dron a la derecha 
+        droneParts.base.position.x += moveSpeed;
+        droneParts.camaras.position.x += moveSpeed;
+        droneParts.motor.position.x += moveSpeed;
+        droneParts.helices.position.x += moveSpeed;
+    }
+
+    const movement = Math.sin(elapsedTime);
+    droneParts.helices.traverse(function (child) {
+        if (child.name === 'helice1') {
+            child.rotation.y += 0.4;
+        }
+    });
+
+    orbitControls.update();
+
+    renderer.render(scene, camera);
+    requestAnimationFrame(animate);
+};
+
+animate();

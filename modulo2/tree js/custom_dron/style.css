@@ -1,0 +1,34 @@
+#motor{
+    width: 125px;
+    height: 20px;
+    
+}
+#helice{
+    width: 125px;
+    height: 20px;
+}
+#camara{
+    width: 125px;
+    height: 20px;
+}
+
+.direccion{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#motor:hover{
+    background-color: #44a691;
+    color: white;
+}
+
+#helice:hover{
+ background-color:#f5b73b ;
+
+}
+
+#camara:hover{
+    background-color:#f52f0c;
+    color: white;
+}
