@@ -1,58 +1,65 @@
+const motor = document.getElementById("motor");
+const helice = document.getElementById("helice");
+const camara = document.getElementById("camara");
+const base = document.getElementById("base");
 
-const motor = document.getElementById("motor")
-const helice = document.getElementById("helice")
-const camara = document.getElementById("camara")
+const array_motor = [
+    {id: 1, text: "motor 1", ruta: "./model/motor/Motor1.gltf"},
+    {id: 2, text: "motor 2", ruta: "./model/motor/Motor2.gltf"},
+    {id: 3, text: "motor 3", ruta: "./model/motor/Motor3.gltf"}
+];
 
+const objeto_base = [
+    {id: 1, text4: "base", ruta: " ./model/base/Base.gltf"},
 
-const values = [
-    {id:1, text:"motor 1",ruta:"./model/motor/Motor1.gltf"},
-    {id:2, text:"motor 2",ruta:"./model/motor/Motor2.gltf"},
-    {id:3, text:"motor 3",ruta:"./model/motor/Motor3.gltf"},
-    
-]
-const values2 = [
-    {id2:0, text2:"helice 1"},
-    {id2:1, text2:"helice 2"},
-    {id2:2, text2:"helice 3"},
-    
 ]
 
-const values3 = [
-    {id3:0, text3:"camara 1"},
-    {id3:1, text3:"camara 2"},
-    {id3:2, text3:"camara 3"},
-    
-]
+const array_helice = [
+    {id: 0, text2: "helice 1", ruta: "./model/helices/Helice1.gltf", name: "helice1"},
+    {id: 1, text2: "helice 2", ruta: "./model/helices/Helice2.gltf", name: "helice2"},
+    {id: 2, text2: "helice 3", ruta: "./model/helices/Helice3.gltf", name: "helice3"}
+];
 
-values3.forEach(obj => {
-    const $option3 = document.createElement("option")
-    $option3.value = obj.id3
-    $option3.innerHTML = obj.text3
-    camara.appendChild($option3)
-})
+const array_camara = [
+    {id: 0, text3: "camara 1",ruta: "./model/cam/Cam1.gltf"},
+    {id: 1, text3: "camara 2",ruta: "./model/cam/cam2.gltf"},
+    {id: 2, text3: "camara 3",ruta: "./model/cam/cam3.gltf"}
+];
+
+array_camara.forEach(obj => {
+    const $option3 = document.createElement("option");
+    $option3.value = obj.id;
+    $option3.innerHTML = obj.text3;
+    camara.appendChild($option3);
+});
+
+objeto_base.forEach(obj => {
+    const $option3 = document.createElement("option");
+    $option3.value = obj.id;
+    $option3.innerHTML = obj.text4;
+    base.appendChild($option3);
+});
 
 
-values2.forEach(obj => {
-    const $option2 = document.createElement("option")
-    $option2.value = obj.id2
-    $option2.innerHTML = obj.text2
-    helice.appendChild($option2)
-})
+array_helice.forEach(obj => {
+    const $option2 = document.createElement("option");
+    $option2.value = obj.id;
+    $option2.innerHTML = obj.text2;
+    helice.appendChild($option2);
+});
 
+array_motor.forEach(obj => {
+    const $option = document.createElement("option");
+    $option.value = obj.id;
+    $option.innerHTML = obj.text;
+    motor.appendChild($option);
+});
 
-values.forEach(obj => {
-    const $option = document.createElement("option")
-    $option.value = obj.id
-    $option.innerHTML = obj.text
-    motor.appendChild($option)
-})
-
-    
 var scene = new THREE.Scene();
 
-var camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 50);
+var camera = new THREE.PerspectiveCamera(20, window.innerWidth / window.innerHeight, 0.1, 100);
 scene.add(camera);
-camera.position.set(-5, 5, 10);
+camera.position.set(0, 8, -10);
 camera.lookAt(new THREE.Vector3());
 
 // Configuración del renderer
@@ -91,62 +98,71 @@ const droneParts = {
     helices: new THREE.Group(),
     base: new THREE.Group(),
     camaras: new THREE.Group(),
+    base: new THREE.Group(),
+
 };
 
 motor.addEventListener("change", (event) => {
-    console.log(event.target.value);
-    console.log(values.find((e) => e.id == event.target.value).ruta);
-    loadModels(values.find((e) => e.id == event.target.value).ruta, droneParts.motor)  
-    groupParts.remove(gltf.scene);
+    const selectedMotor = array_motor.find((e) => e.id == event.target.value);
+    if (selectedMotor) {
+        loadModels(selectedMotor.ruta, droneParts.motor);
+    }
+    droneParts.motor.clear();
 
 });
 
-function loadModels(ruta, groupParts) {
+base.addEventListener("change", (event) => {
+    const selectedbase = objeto_base.find((e) => e.id == event.target.value);
+    if (selectedbase) {
+        loadModels(selectedbase.ruta, droneParts.base);
+    }
+    droneParts.base.clear();
+
+});
+
+camara.addEventListener("change", (event) => {
+    const selectedCamara = array_camara.find((e) => e.id == event.target.value);
+    if (selectedCamara) {
+        loadModels(selectedCamara.ruta, droneParts.camaras);
+    }
+    droneParts.camaras.clear();
+
+});
+
+
+helice.addEventListener("change", (event) => {
+    loadModels(array_helice.find((e) => e.id == event.target.value).ruta, droneParts.helices, 'helice3');
+    droneParts.helices.clear();
+
+});
+
+function loadModels(ruta, groupParts, name) {
     gltfLoader.load(ruta, function (gltf) {
+        gltf.scene.traverse(function (child) {
+            if (child.isMesh) {
+                child.name = name;
+            }
+        });
         groupParts.add(gltf.scene);
     }, undefined, function (error) {
-        console.error('Error al cargar el modelo Base:', error);
+        console.error('Error al cargar el modelo:', error);
     });
-
 }
 
 
-gltfLoader.load('./model/base/Base.gltf', function (gltf) {
-    droneParts.base.add(gltf.scene);
-}, undefined, function (error) {
-    console.error('Error al cargar el modelo Base:', error);
-});
-
-gltfLoader.load('./model/cam/Cam1.gltf', function (gltf) {
-    droneParts.camaras.add(gltf.scene);
-}, undefined, function (error) {
-    console.error('Error al cargar el modelo Cam1:', error);
-});
-loadModels(values[0].ruta,droneParts.motor)
 
 
-// gltfLoader.load('./model/motor/Motor2.gltf', function (gltf) {
-//     droneParts.motor.add(gltf.scene);
-// }, undefined, function (error) {
-//     console.error('Error al cargar el modelo Motor2:', error);
-// });
+loadModels(array_motor[0].ruta, droneParts.motor, 'motor1');
+loadModels(array_helice[0].ruta, droneParts.helices, 'helice3');
+loadModels(array_camara[0].ruta, droneParts.camaras, 'cam1');
+loadModels(objeto_base[0].ruta, droneParts.base, 'base');
 
-gltfLoader.load('./model/helices/Helice3.gltf', function (gltf) {
-    gltf.scene.traverse(function (child) {
-        if (child.isMesh) {
-            child.name = 'helice1';
-        }
-    });
-    droneParts.helices.add(gltf.scene);
-}, undefined, function (error) {
-    console.error('Error al cargar el modelo Helice3:', error);
-});
 
 scene.add(droneParts.base);
 scene.add(droneParts.camaras);
 scene.add(droneParts.motor);
 scene.add(droneParts.helices);
-
+scene.add(droneParts.base);
 const plane = new THREE.Mesh(
     new THREE.PlaneBufferGeometry(10, 10),
     new THREE.ShadowMaterial({ opacity: 0.5 })
@@ -163,7 +179,7 @@ scene.background = new THREE.Color(0xfafaf9);
 const light1 = new THREE.DirectionalLight(0xfcfcfc, 4.3);
 light1.position.set(0, 6, 1);
 light1.castShadow = true;
-light1.shadow.mapSize.set(2048, 2048);
+light1.shadow.mapSize.set(2080, 2048);
 light1.shadow.bias = -0.000131;
 scene.add(light1);
 
@@ -205,10 +221,6 @@ window.addEventListener("keyup", (e) => {
     } 
 });
 
-
-
-
-
 const animate = () => {
     const elapsedTime = clock.getElapsedTime();
 
@@ -230,28 +242,26 @@ const animate = () => {
 
     if (movingLeft) {
         // Mover el dron a la izquierda
-        droneParts.base.position.x -= moveSpeed;
-        droneParts.camaras.position.x -= moveSpeed;
-        droneParts.motor.position.x -= moveSpeed;
-        droneParts.helices.position.x -= moveSpeed;
-    }
-
-    if (movingRight) {
-        // Mover el dron a la derecha 
         droneParts.base.position.x += moveSpeed;
         droneParts.camaras.position.x += moveSpeed;
         droneParts.motor.position.x += moveSpeed;
         droneParts.helices.position.x += moveSpeed;
     }
 
-    const movement = Math.sin(elapsedTime);
-    droneParts.helices.traverse(function (child) {
-        if (child.name === 'helice1') {
-            child.rotation.y += 0.4;
+    if (movingRight) {
+        // Mover el dron a la derecha 
+        droneParts.base.position.x -= moveSpeed;
+        droneParts.camaras.position.x -= moveSpeed;
+        droneParts.motor.position.x -= moveSpeed;
+        droneParts.helices.position.x -= moveSpeed;
+    }
+
+    // Rotar la hélice
+    droneParts.helices.traverse((child) => {
+        if (child.name === 'helice3') {
+            child.rotation.y += 0.3; 
         }
     });
-
-    orbitControls.update();
 
     renderer.render(scene, camera);
     requestAnimationFrame(animate);
