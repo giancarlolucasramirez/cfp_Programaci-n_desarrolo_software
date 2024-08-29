@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="nan.js">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-<script src="nan.js"></script>    
+    <div class="game-container">
+        <canvas id="gameCanvas" width="300" height="600"></canvas>
+        <div class="score-board">
+            <p>Puntuación: <span id="score">0</span></p>
+        </div>
+    </div>
+    <script src="nan.js"></script>
 </body>
 </html>
