@@ -1,72 +1,62 @@
-//pudes hacer que baje mas la pieza que se visualice en la  consola 
-const gridWidth = 100;
-const gridHeight = 100;
+let fila_actual, columna_actual;
+let tetrix = new Array(10);
 
-let grid = Array.from({ length: gridHeight }, () => Array(gridWidth).fill('⬜'));
+for (let fila = 0; fila < 10; fila++) {
+    tetrix[fila]  = new Array(10);
+    for (let columna = 0; columna < 10; columna++) {
+        tetrix[fila][columna] = "⬜";
+    }
+}
 
-const pieces = {
-    I: ['🔵🔵🔵🔵'],
-    O: ['🟡🟡', '🟡🟡'],
-    T: ['⬛🟣⬛', '🟣🟣🟣'],
-    L: ['🟧', '🟧', '🟧🟧'],
-    J: ['🟦', '🟦', '🟦🟦'],
-    Z: ['🟥🟥⬛', '⬛🟥🟥'],
-    S: ['⬛🟩🟩', '🟩🟩⬛']
-};
 
-let currentPiece = pieces['O'];
-let pieceRow = 0;
-let pieceCol = 3;
+fila_actual = 0;
+columna_actual = 0;  // La pieza comenzará en la primera fila, primera columna
 
-function drawGrid() {
-    console.clear();
-    let displayGrid = JSON.parse(JSON.stringify(grid));
+function imprimirTetrix() {
+    for (let fila = 0; fila < 10; fila++) {
+        let filaTexto = '';
+        for (let columna = 0; columna < 10; columna++) {
+            filaTexto += tetrix[fila][columna] + " ";
+        }
+        document.write(filaTexto );
 
-    for (let i = 0; i < currentPiece.length; i++) {
-        for (let j = 0; j < currentPiece[i].length; j++) {
-            if (currentPiece[i][j] !== '') {
-                displayGrid[pieceRow + i][pieceCol + j] = currentPiece[i][j];
-            }
+    }
+
+}
+
+
+
+
+
+function moverPiezaAbajo() {
+    if (fila_actual + 1 < 10) { // Asegura que la pieza no se salga del tablero
+        // Borra la pieza de la posición anterior
+        for (let i = 0; i < 4; i++) {
+            tetrix[fila_actual][columna_actual + i] = "⬜";
+        }
+
+        // Actualiza la fila
+        fila_actual++;
+
+        // Dibuja la pieza en la nueva posición
+        for (let i = 0; i < 4; i++) {
+            tetrix[fila_actual][columna_actual + i] = "🔵";
         }
     }
-
-    for (let row of displayGrid) {
-        console.log(row.join(' '));
-    }
 }
 
-function movePiece(direction) {
-    if (direction === 'left' && pieceCol > 0) {
-        pieceCol--;
-    } else if (direction === 'right' && pieceCol < gridWidth - currentPiece[0].length) {
-        pieceCol++;
-    } else if (direction === 'down' && pieceRow < gridHeight - currentPiece.length) {
-        pieceRow++;
+function iniciar() {
+    // Dibuja la pieza inicial en horizontal
+    for (let i = 0; i < 4; i++) {
+        tetrix[fila_actual][columna_actual + i] = "🔵";
     }
 
-    drawGrid();
+    imprimirTetrix();
+    setInterval(() => {
+  moverPiezaAbajo();
+  document.body.innerHTML = ''; // Limpia la pantalla
+  imprimirTetrix();
+    }, 1000); // Baja la pieza cada 500 ms
 }
 
-function rotatePiece() {
-    currentPiece = currentPiece[0].map((_, index) => 
-        currentPiece.map(row => row[index]).reverse()
-    );
-
-    drawGrid();
-}
-
-drawGrid();
-
-setInterval(() => {
-    movePiece('down')
-}, 100);
-
-document.addEventListener('keydown', (event) => {
-    if (event.key === 'ArrowLeft') {
-        movePiece('left');
-    } else if (event.key === 'ArrowRight') {
-        movePiece('right');
-    } else if (event.key === 'ArrowUp') {
-        rotatePiece();
-    }
-});
+iniciar();
