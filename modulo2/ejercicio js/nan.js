@@ -1,10 +1,10 @@
 let fila_actual, columna_actual;
-let Tetrix = new Array(10);
+let tetrix = new Array(10);
 
 for (let fila = 0; fila < 10; fila++) {
-    Tetrix[fila]  = new Array(10);
+    tetrix[fila]  = new Array(10);
     for (let columna = 0; columna < 10; columna++) {
-        Tetrix[fila][columna] = "⬜";
+        tetrix[fila][columna] = "⬜";
     }
 }
 
@@ -16,7 +16,7 @@ function imprimirTetrix() {
     for (let fila = 0; fila < 10; fila++) {
         let filaTexto = '';
         for (let columna = 0; columna < 10; columna++) {
-            filaTexto += Tetrix[fila][columna] + " ";
+            filaTexto += tetrix[fila][columna] + " ";
         }
         document.write(filaTexto );
 
@@ -32,7 +32,7 @@ function moverPiezaAbajo() {
     if (fila_actual + 1 < 10) { // Asegura que la pieza no se salga del tablero
         // Borra la pieza de la posición anterior
         for (let i = 0; i < 4; i++) {
-            Tetrix[fila_actual][columna_actual + i] = "⬜";
+            tetrix[fila_actual][columna_actual + i] = "⬜";
         }
 
         // Actualiza la fila
@@ -40,7 +40,7 @@ function moverPiezaAbajo() {
 
         // Dibuja la pieza en la nueva posición
         for (let i = 0; i < 4; i++) {
-            Tetrix[fila_actual][columna_actual + i] = "🔵";
+            tetrix[fila_actual][columna_actual + i] = "🔵";
         }
     }
 }
@@ -48,7 +48,7 @@ function moverPiezaAbajo() {
 function iniciar() {
     // Dibuja la pieza inicial en horizontal
     for (let i = 0; i < 4; i++) {
-        Tetrix[fila_actual][columna_actual + i] = "🔵";
+        tetrix[fila_actual][columna_actual + i] = "🔵";
     }
 
     imprimirTetrix();
