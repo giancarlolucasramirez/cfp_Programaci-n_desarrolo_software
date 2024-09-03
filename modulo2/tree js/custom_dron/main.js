@@ -226,34 +226,50 @@ const animate = () => {
 
     if (movingUp) {
         // Subir el dron 
-        droneParts.base.position.y += moveSpeed;
-        droneParts.camaras.position.y += moveSpeed;
-        droneParts.motor.position.y += moveSpeed;
-        droneParts.helices.position.y += moveSpeed;
+        if(droneParts.base.position.y < 1){
+            droneParts.base.position.y += moveSpeed;
+            droneParts.camaras.position.y += moveSpeed;
+            droneParts.motor.position.y += moveSpeed;
+            droneParts.helices.position.y += moveSpeed;
+
+        } 
+
+
+      
     }
 
     if (movingDown) {
         // Bajar el dron 
-        droneParts.base.position.y -= moveSpeed;
+        if(droneParts.base.position.y > -1){
+            droneParts.base.position.y -= moveSpeed;
         droneParts.camaras.position.y -= moveSpeed;
         droneParts.motor.position.y -= moveSpeed;
         droneParts.helices.position.y -= moveSpeed;
+        }
+        
     }
 
     if (movingLeft) {
         // Mover el dron a la izquierda
-        droneParts.base.position.x += moveSpeed;
-        droneParts.camaras.position.x += moveSpeed;
-        droneParts.motor.position.x += moveSpeed;
-        droneParts.helices.position.x += moveSpeed;
+        if(droneParts.base.position.x < 1){
+
+            droneParts.base.position.x += moveSpeed;
+            droneParts.camaras.position.x += moveSpeed;
+            droneParts.motor.position.x += moveSpeed;
+            droneParts.helices.position.x += moveSpeed;
+        }
+
     }
 
     if (movingRight) {
         // Mover el dron a la derecha 
-        droneParts.base.position.x -= moveSpeed;
-        droneParts.camaras.position.x -= moveSpeed;
-        droneParts.motor.position.x -= moveSpeed;
-        droneParts.helices.position.x -= moveSpeed;
+        if(droneParts.base.position.x > -1){
+            droneParts.base.position.x -= moveSpeed;
+            droneParts.camaras.position.x -= moveSpeed;
+            droneParts.motor.position.x -= moveSpeed;
+            droneParts.helices.position.x -= moveSpeed;
+        }
+       
     }
 
     // Rotar la hélice

@@ -3,21 +3,18 @@
     height: 20px;
     border-color: #44a691;  
     border-radius: 10px;  
-    list-style: none;
 }
 #helice{
     width: 125px;
     height: 20px;
     border-color: #44a691;  
     border-radius: 10px;  
-    list-style: none;
 }
 #camara{
     width: 125px;
     height: 20px;
     border-color: #44a691;  
     border-radius: 10px;  
-    list-style: none;
 }
 
 #base{
@@ -25,13 +22,15 @@
     height: 20px;
     border-color: #44a691;  
     border-radius: 10px;  
-    list-style: none;
+
 }
 
 .direccion{
     display: flex;
     flex-direction: column;
     gap: 5px;
+    list-style: none;
+
 }
 
 #motor:hover{
@@ -41,7 +40,6 @@
 
 #helice:hover{
  background-color:#f5b73b ;
-
 }
 
 #camara:hover{
