@@ -1,62 +1,41 @@
-let fila_actual, columna_actual;
-let tetrix = new Array(10);
+/*
+crear un programa que sea capaz de gestionar una pieza de tetris
+10x10 
+emogi
+3 piezas
+la pieza aparecera en la parte superior  izquierda de la pantalla desarollar una funcion capaz desplazar y rotar 
+la pieza en el tablero, recibiendo una accion cada vez que se llame, desplazar y rotar la pieza
+*/
+// let currentPiece = generatePiece(); 
+ // Define the size of the Tetris board
 
-for (let fila = 0; fila < 10; fila++) {
-    tetrix[fila]  = new Array(10);
-    for (let columna = 0; columna < 10; columna++) {
-        tetrix[fila][columna] = "⬜";
-    }
-}
+let tetris = new Array(10)
 
+console.log(tetris.fill("⬜"));
 
-fila_actual = 0;
-columna_actual = 0;  // La pieza comenzará en la primera fila, primera columna
-
-function imprimirTetrix() {
-    for (let fila = 0; fila < 10; fila++) {
-        let filaTexto = '';
-        for (let columna = 0; columna < 10; columna++) {
-            filaTexto += tetrix[fila][columna] + " ";
-        }
-        document.write(filaTexto );
-
-    }
-
+for (let i = 0; i <= 10; i++) { 
+  console.log(tetris)
 }
 
 
 
 
-
-function moverPiezaAbajo() {
-    if (fila_actual + 1 < 10) { // Asegura que la pieza no se salga del tablero
-        // Borra la pieza de la posición anterior
-        for (let i = 0; i < 4; i++) {
-            tetrix[fila_actual][columna_actual + i] = "⬜";
-        }
-
-        // Actualiza la fila
-        fila_actual++;
-
-        // Dibuja la pieza en la nueva posición
-        for (let i = 0; i < 4; i++) {
-            tetrix[fila_actual][columna_actual + i] = "🔵";
-        }
-    }
+function generar_pieza() {
+  let pieza = [];
+  let type = Math.floor(Math.random() * 7);
+  switch (type) {
+    case 0: // I-piece
+    pieza = [[1, 1, 1, 1]];
+      break;
+    case 1: // J-piece
+    pieza = [[1, 0, 0], [1, 1, 1]];
+      break;
+    case 2: // L-piece
+    pieza = [[0, 0, 1], [1, 1, 1]];
+      break;
+    case 3: // O-piece
+    pieza = [[1, 1], [1, 1]];
+      break;
+  }
+  return pieza;
 }
-
-function iniciar() {
-    // Dibuja la pieza inicial en horizontal
-    for (let i = 0; i < 4; i++) {
-        tetrix[fila_actual][columna_actual + i] = "🔵";
-    }
-
-    imprimirTetrix();
-    setInterval(() => {
-  moverPiezaAbajo();
-  document.body.innerHTML = ''; // Limpia la pantalla
-  imprimirTetrix();
-    }, 1000); // Baja la pieza cada 500 ms
-}
-
-iniciar();
