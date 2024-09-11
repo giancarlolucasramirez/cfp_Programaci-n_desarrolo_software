@@ -8,37 +8,50 @@ la pieza en el tablero, recibiendo una accion cada vez que se llame, desplazar y
 */
 
 
-function tetrix() {
 
-  let tetris = new Array(10)
+let tetrisSize = 10; 
+let tetris = Array(tetrisSize).fill().map(() => Array(tetrisSize).fill("⬜")); 
+let currentPiece = generatePiece(); 
 
-  console.log(tetris.fill("⬜"));
+function imprimir_tetris() {  
+  console.log(tetris)   
+   
+   
+}       
 
-  for (let i = 0; i <= 10; i++) {
-    console.log(tetris)
+
+
+
+for (let i = 0; i < currentPiece.length; i++) {
+  for (let j = 0; j < currentPiece[i].length; j++) {
+    if (currentPiece[i][j] === 1) {
+      if (i < tetrisSize && j + 3 < tetrisSize) { 
+        tetris[i][j] = "🟨";
+      }
+    }
   }
-
 }
 
+  
 
-function generar_pieza() {
-  let pieza = [];
-  let type = Math.floor(Math.random() * 7);
+
+function generatePiece() {
+  let piece = [];
+  let type = Math.floor(Math.random() * 3);
   switch (type) {
     case 0: // I-piece
-      pieza = [[1, 1, 1, 1]];
+      piece = [[1, 1, 1, 1]];
       break;
     case 1: // J-piece
-      pieza = [[1, 0, 0], [1, 1, 1]];
+      piece = [[1, 0, 0], [1, 1, 1]];
       break;
     case 2: // L-piece
-      pieza = [[0, 0, 1], [1, 1, 1]];
+      piece = [[0, 0, 1], [1, 1, 1]];
       break;
-    case 3: // O-piece
-      pieza = [[1, 1], [1, 1]];
-      break;
+  
   }
-  return pieza;
+  return piece;
 }
 
- tetrix()
+
+imprimir_tetris();
