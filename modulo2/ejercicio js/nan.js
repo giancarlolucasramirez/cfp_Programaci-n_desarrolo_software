@@ -41,4 +41,4 @@ function generar_pieza() {
   return pieza;
 }
 
-//  tetrix()
+ tetrix()
