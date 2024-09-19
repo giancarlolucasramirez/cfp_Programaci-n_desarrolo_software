@@ -32,5 +32,5 @@ for (let fila = 0; fila < 10; fila++) {
        
         filaTexto += laberinto[fila][columna] + " ";
     }
-    console.log(filaTexto); 
+    console.log(filaTexto);
 }

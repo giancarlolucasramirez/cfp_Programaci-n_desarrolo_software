@@ -10,3 +10,4 @@ function torresDeHanoi(n, origen, destino, auxiliar) {
 
 let numeroDeDiscos = 3;
 torresDeHanoi(numeroDeDiscos, 'A', 'C', 'B');
+
