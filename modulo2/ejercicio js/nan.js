@@ -15,7 +15,7 @@ function imprimir_tetris() {
 }
 
 for (let i = 0; i < currentPiece.length; i++) {
-  for (let j = 0; j < currentPiece[i].length; j++) {
+  for (let j =! 0; j < currentPiece[i].length; j++) {
 
     if (currentPiece[i][j] === 1) {
       if (i < tetrisSize && j < tetrisSize) {
@@ -74,7 +74,7 @@ function bajarPieza() {
 }
 function bajarPieza3() {
   for (let i = tetrisSize - 2; i >= 0; i--) {
-    for (let j = 0; j < tetrisSize; j++) {
+    for (let j = 0; j < tetisSize; j++) {
       if (tetris[i][j] === "🟧" ) {
 
         if (i + 1 < tetrisSize) {
@@ -82,7 +82,7 @@ function bajarPieza3() {
           tetris[i][j] = "⬜";
         }
       }
-    }
+    }   
   }
 }
 console.log( Array(tetrisSize).fill().map(() => Array(tetrisSize).fill("⬜")))
@@ -90,7 +90,6 @@ console.log( Array(tetrisSize).fill().map(() => Array(tetrisSize).fill("⬜")))
 for (i = 0; i <= 2; i++) {
   for (j = 0; j <= 2; j++) {
     imprimir_tetris()  
-     // Imprime el tablero de Tetris
     bajarPieza()
     bajarPieza3()
   }
