@@ -39,7 +39,7 @@
 
 
 
-// ejercicio6
+// ejercicio5
 // const  objeto_Usuario = {
 //     nombre: "Juan",
 //     edad: 30,
@@ -49,22 +49,18 @@
 
 
 
-// ejercicio7
+// ejercicio6
 // function saludar(nombre) {
 //     console.log(`Hola, ${nombre}!`);
 // }
 //  export default saludar;
  
 
-// ejercicio8
+// ejercicio7
 // const texto = "Este es mi texto para mi alias";
-
-
-
-
-// ejercicio9
 // export { texto as alias };
 
+// ejercicio8
 
     // function suma(x,y){
     //     return x+y
