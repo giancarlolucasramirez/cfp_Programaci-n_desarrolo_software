@@ -1,7 +1,7 @@
-const {readFile} = require('node:fs/promises')
-const promices = require('node:fs/promises')
+import {readFile} from 'node:fs/promises';
+import promices from 'node:fs/promises'
 
-
+// import promices from 'node:fs/promices'
 promices.readFile('texto.txt', 'utf-8')
     .then((data) => {
         console.log(data)
@@ -21,9 +21,7 @@ Promise.all([
     console.error(`error reading file ${err}`);
 });
 
-
 async function promesas() {
-    
     try{
         let data3 =  await readFile('muchotexto.txt', 'utf-8');
         console.log(data3);
