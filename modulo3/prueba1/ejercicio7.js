@@ -1,7 +1,9 @@
 function palindromo(string) {
+    //verifica si el estring es menor a 1 caracter.
     if (string.length <= 1) {
-        return true;
+        return true;//una cadena vacía o de un solo carácter es un palíndromo).
     }
+   //comparar primer y ultimo caracter
     if (string[0] !== string[string.length - 1]) {
         return false;
     }
@@ -9,12 +11,8 @@ function palindromo(string) {
 }
 
 let palabra  = "radar";
-let palabra2 = "ana"
-let  palabra3 = "anita";
-let palabra4 = "hola";
-let palabra5 = "anilina"
+let palabra2 = "a";
+
 console.log(palindromo(palabra)); 
-console.log(palindromo(palabra2)); 
-console.log(palindromo(palabra3)); 
-console.log(palindromo(palabra4)); 
-console.log(palindromo(palabra5));
+
+console.log(palindromo(palabra2));
