@@ -68,4 +68,3 @@ INSERT INTO productos VALUES(21,'Plancha de Vapor',150.00,300,4);
 INSERT INTO productos VALUES(22,'Licuadora',350.00,110,4);
 INSERT INTO productos VALUES(23,'Batidora',250.00,310,4);
 INSERT INTO productos VALUES(24,'Tostadora',120.00,140,4);
-
