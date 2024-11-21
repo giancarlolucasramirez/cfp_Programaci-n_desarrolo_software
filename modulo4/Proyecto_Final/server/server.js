@@ -1,9 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const cors = require('cors');
+const cors = require("cors");
+
 
 const app = express();
-const port = 3000;
+const port = 4321;
 
 // Middleware
 app.use(express.json());
@@ -56,7 +57,6 @@ app.post('/tasks', async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
-
 // Actualizar tarea
 app.put('/tasks/:id', async (req, res) => {
   const { id } = req.params;
@@ -98,7 +98,7 @@ app.patch('/tasks/:id/complete', async (req, res) => {
 });
 
 // Iniciar servidor
-app.listen(3000, () => {
-  console.log('Servidor escuchado en http://localhost:3000/tasks');
+app.listen(4321, () => {
+  console.log('Servidor escuchado en https://4322-idx-cfpprogramaci-ndesarrolosoftwaregit-1731941233207.cluster-vyr53kd25jc2yvngldrwyq6zc4.cloudworkstations.dev');
 });
 

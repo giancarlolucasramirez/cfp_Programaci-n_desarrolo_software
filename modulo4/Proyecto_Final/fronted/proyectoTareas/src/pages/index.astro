@@ -1,19 +1,114 @@
----
-let tasks = [
-	{}
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Tareas</title>
+  </head>
+  <body class="bg-gray-100">
+    <div class="max-w-2xl mx-auto p-6">
+      <h1 class="text-3xl font-bold mb-4 text-center">Lista de Tareas</h1>
 
-]
----
+      <!-- Formulario para agregar nuevas tareas -->
+      <form id="task-form" class="mb-4">
+        <input
+          type="text"
+          id="new-task"
+          placeholder="Nueva tarea"
+          class="w-full p-2 border rounded mb-2"
+        />
+        <button type="submit" class="bg-blue-500 text-white p-2 rounded w-full hover:bg-blue-600">
+          Agregar tarea
+        </button>
+      </form>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1 class="text-red-500">Astro</h1>
-	</body>
+      <!-- Contenedor de la lista de tareas -->
+      <ul id="task-list" class="space-y-2">
+        <!-- Las tareas se renderizan aquí -->
+      </ul>
+    </div>
+
+    <script type="module">
+      import { fetchTasks, createTask, updateTask, deleteTask } from '../utils/api.js';
+
+      let tasks = [];
+
+      // Función para manejar el formulario de agregar tareas
+      document.getElementById("task-form").addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const input = document.getElementById("new-task");
+        const title = input.value.trim();
+
+        if (title) {
+          try {
+            const newTask = await createTask(title);
+            tasks.push(newTask); // Agregar la tarea al estado local
+            input.value = ""; // Limpiar el campo
+            renderTasks(); // Renderizar la lista de tareas
+          } catch (error) {
+            console.error("Error al agregar la tarea:", error);
+          }
+        } else {
+          console.log("El título de la tarea no puede estar vacío.");
+        }
+      });
+
+      // Función para renderizar las tareas
+      function renderTasks() {
+        const taskList = document.getElementById("task-list");
+        taskList.innerHTML = ""; // Limpiar antes de renderizar
+
+        tasks.forEach(task => {
+          const listItem = document.createElement("li");
+          listItem.className = "flex justify-between items-center p-3 bg-white rounded shadow-md";
+          listItem.dataset.id = task._id;
+          listItem.innerHTML = `
+            <span class="${task.completed ? 'line-through text-gray-500' : ''}">${task.title}</span>
+            <div class="flex space-x-2">
+              <button class="toggle-task bg-green-500 text-white p-2 rounded hover:bg-green-600">✔️</button>
+              <button class="delete-task bg-red-500 text-white p-2 rounded hover:bg-red-600">❌</button>
+            </div>
+          `;
+          taskList.appendChild(listItem);
+        });
+      }
+
+      // Función para obtener las tareas del servidor
+      async function updateTasks() {
+        try {
+          tasks = await fetchTasks();
+          renderTasks();
+        } catch (error) {
+          console.error("Error al actualizar las tareas:", error);
+        }
+      }
+
+      // Evento delegado para manejar los botones de "completar" y "eliminar"
+      document.getElementById("task-list").addEventListener("click", async (event) => {
+        const button = event.target;
+        const listItem = button.closest("li");
+        if (!listItem) return;
+
+        const taskId = listItem.dataset.id;
+
+        if (button.classList.contains("toggle-task")) {
+          try {
+            await updateTask(taskId);
+            await updateTasks();
+          } catch (error) {
+            console.error("Error al alternar la tarea:", error);
+          }
+        } else if (button.classList.contains("delete-task")) {
+          try {
+            await deleteTask(taskId);
+            await updateTasks();
+          } catch (error) {
+            console.error("Error al eliminar la tarea:", error);
+          }
+        }
+      });
+
+      // Inicializar la lista de tareas al cargar la página
+      await updateTasks();
+    </script>
+  </body>
 </html>
