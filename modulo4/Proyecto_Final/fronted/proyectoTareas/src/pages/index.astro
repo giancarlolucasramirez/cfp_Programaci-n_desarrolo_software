@@ -1,31 +1,8 @@
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lista de Tareas</title>
-  </head>
-  <body class="bg-gray-100">
-    <div class="max-w-2xl mx-auto p-6">
-      <h1 class="text-3xl font-bold mb-4 text-center">Lista de Tareas</h1>
+---
+import Layaut from "src/component/Layaut.astro"
+---
 
-      <!-- Formulario para agregar nuevas tareas -->
-      <form id="task-form" class="mb-4">
-        <input
-          type="text"
-          id="new-task"
-          placeholder="Nueva tarea"
-          class="w-full p-2 border rounded mb-2"
-        />
-        <button type="submit" class="bg-blue-500 text-white p-2 rounded w-full hover:bg-blue-600">
-          Agregar tarea
-        </button>
-      </form>
-
-      <!-- Contenedor de la lista de tareas -->
-      <ul id="task-list" class="space-y-2">
-        <!-- Las tareas se renderizan aquí -->
-      </ul>
-    </div>
+<Layaut/>
 
     <script type="module">
       import { fetchTasks, createTask, updateTask, deleteTask } from '../utils/api.js';

@@ -1,4 +1,4 @@
-const API_URL = "https://4322-idx-cfpprogramaci-ndesarrolosoftwaregit-1731941233207.cluster-vyr53kd25jc2yvngldrwyq6zc4.cloudworkstations.dev";
+const API_URL = "https://localhost:3000/tasks";
 ; // Cambia esta URL si estás en producción
 
 export async function fetchTasks() {
