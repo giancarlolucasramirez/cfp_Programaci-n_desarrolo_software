@@ -1,0 +1,22 @@
+---
+// Recibimos las propiedades para mostrar una tarea y sus acciones
+const { id, title, completed, onComplete, onDelete } = Astro.props;
+---
+
+<div class="tarea flex justify-between items-center p-4 mb-4 border border-gray-300 rounded-lg" data-id={id}>
+  <p class={completed ? "line-through text-gray-500" : ""}>{title}</p>
+  <div class="flex gap-4">
+    <button 
+      class="text-green-500" 
+      onclick={onComplete}
+    >
+      ✔️
+    </button>
+    <button 
+      class="text-red-500" 
+      onclick={onDelete} 
+    >
+      ❌
+    </button>
+  </div>
+</div>

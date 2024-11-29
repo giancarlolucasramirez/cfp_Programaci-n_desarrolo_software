@@ -1,46 +1,40 @@
-const API_URL = "https://localhost:3000/tasks";
-; // Cambia esta URL si estás en producción
+const API_URL = "http://localhost:3000/api"; // Cambiar al dominio real si aplica
 
 export async function fetchTasks() {
   const response = await fetch(`${API_URL}/tasks`);
   if (!response.ok) {
     throw new Error("Error al obtener las tareas");
   }
-  return await response.json();
+  return response.json();
 }
 
-export async function createTask(title) {
+export async function crearTarea(title) {
   const response = await fetch(`${API_URL}/tasks`, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ title }),
   });
   if (!response.ok) {
     throw new Error("Error al crear la tarea");
   }
-  return await response.json();
+  return response.json();
 }
 
-export async function updateTask(id) {
+export async function completeTask(id) {
   const response = await fetch(`${API_URL}/tasks/${id}`, {
-    method: "PATCH",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ completed: true }),
+    method: "PUT",
   });
   if (!response.ok) {
-    throw new Error("Error al actualizar la tarea");
+    throw new Error("Error al completar la tarea");
   }
-  return await response.json();
+  return response.json();
 }
 
 export async function deleteTask(id) {
-  const response = await fetch(`${API_URL}/tasks/${id}`, { method: "DELETE" });
+  const response = await fetch(`${API_URL}/tasks/${id}`, {
+    method: "DELETE",
+  });
   if (!response.ok) {
     throw new Error("Error al eliminar la tarea");
   }
-  return await response.json();
 }

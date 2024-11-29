@@ -1,0 +1,29 @@
+---
+// Importa la función de la API para obtener las tareas
+import { fetchTasks, completeTask, deleteTask } from '@utils/api.js';
+import Tarea from './Tarea.astro';
+
+let tareas = await fetchTasks();
+
+// Funciones para completar y eliminar tareas
+const handleComplete = async (id:string) => {
+  await completeTask(id);
+  tareas = await fetchTasks(); // Recargar tareas
+};
+
+const handleDelete = async (id:string) => {
+  await deleteTask(id);
+  tareas = await fetchTasks(); // Recargar tareas
+};
+---
+<div id="lista-de-tareas">
+  {tareas.map((tarea: { _id:string; title:string; completed:string; }) => (
+    <Tarea
+      id={tarea._id}
+      title={tarea.title}
+      completed={tarea.completed}
+      onComplete={() => handleComplete(tarea._id)}
+      onDelete={() => handleDelete(tarea._id)}
+    />
+  ))}
+</div>

@@ -1,0 +1,44 @@
+---
+// Recibimos las propiedades para manejar la tarea
+const { onSubmit } = Astro.props;
+
+const handleSubmit = async (e: Event) => {
+  e.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+  const input = document.getElementById("ingresar-tarea") as HTMLInputElement;
+
+  if (!input) {
+    console.error("Input no encontrado.");
+    return;
+  }
+
+  const title = input.value.trim();
+  if (!title) {
+    alert("Por favor, ingresa una tarea válida.");
+    return;
+  }
+
+  try {
+    await onSubmit(title); // Llama al prop recibido con el título
+    input.value = ""; // Limpia el input después del envío
+  } catch (error) {
+    console.error("Error al agregar la tarea:", error);
+  }
+};
+---
+
+<div class="contenedor">
+  <form id="task-form" {...{ "on:submit": handleSubmit }} class="mb-4">
+    <input
+      id="ingresar-tarea"
+      type="text"
+      placeholder="Nueva tarea"
+      class="w-full p-2 border rounded mb-2"
+    />
+    <button
+      type="submit"
+      class="bg-blue-500 text-white p-2 rounded w-full hover:bg-blue-600"
+    >
+      Agregar tarea
+    </button>
+  </form>
+</div>
