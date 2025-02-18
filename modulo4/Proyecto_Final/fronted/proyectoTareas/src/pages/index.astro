@@ -1,0 +1,46 @@
+---
+// Importa los componentes que acabamos de crear
+import FormularioTarea from 'src/component/FormularioTarea.astro';
+import ListaDeTareas from 'src/component/ListaDeTareas.astro';
+import { fetchTasks, createTask } from '@utils/api.js';
+
+let tareas = await fetchTasks(); // Cargar tareas al inicio
+console.log("Tareas iniciales:", tareas);
+
+const handleAddTask = async (title:string) => {
+  console.log("Título recibido:", title);
+  try {
+    const response = await createTask(title);
+    console.log("Respuesta del servidor:", response);
+    tareas = await fetchTasks(); // Recargar tareas
+    console.log("Tareas actualizadas:", tareas);
+  } catch (error) {
+    console.error("Error al agregar tarea:", error);
+  }
+};
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis Tareas</title>
+  </head>
+  <body class="bg-gray-100 flex justify-center items-center min-h-screen p-4">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg">
+      <h1 class="text-3xl font-bold mb-6 text-center">Mis Tareas</h1>
+      <FormularioTarea onSubmit={async (title: string) => {
+        try {
+          await handleAddTask(title); // Enviar solicitud al backend
+          fetchTasks(); // Refrescar lista de tareas
+        } catch (error) {
+          console.error("Error al crear la tarea:", error);
+        }
+      }} />
+      
+      
+      
+      <ListaDeTareas tareas={tareas} />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@utils/*": ["src/utils/*"]
+    },
+    "strict": true,
+    "jsx": "react-jsx"  // Agrega esta línea para habilitar soporte JSX y manejo correcto de eventos
+  }
+}
